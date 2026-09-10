@@ -1,27 +1,81 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Dennis Ivy</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./styles/main.css">
-    </head>
-    <body>
-        <div id="container--main">
-            <a href="index.html">&#x2190; Go Back</a>
-            <h1>Financial Management PortfolioSystem</h1>
-
-            <ul>
-                <li><a href="https://github.com/karisheen/Financial-Management-Portfolio-System">Source code</a></li>
-            </ul>
-
-            <ul>
-                <li>Developed a Financial Management Portfolio System (FMPS) using Python and MySQL, enabling user profile management and financial instrument tracking.</li>
-                <li>Integrated live market data collection using the yfinance library, providing real-time updates for comprehensive investment tracking and decision-making.</li>
-                <li>Implemented SQL-based queries for detailed investment analysis and reporting, enhancing users' ability to make informed financial decisions.</li>
-            </ul>
-        </div>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10120f" />
+    <meta
+      name="description"
+      content="A database and ingestion prototype exploring how market data, investment records, and financial reporting fit together."
+    />
+    <title>Financial Portfolio System — Dakari Antoine</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="./index.html"
+          ><span class="brand-mark" aria-hidden="true">d&gt;</span>
+          DAKARI.ANTOINE</a
+        ><a class="text-link" href="./index.html#work">ALL WORK ↗</a>
+      </div>
+    </header>
+    <main id="main" class="shell detail-main">
+      <a class="text-link" href="./index.html#portfolio-system"
+        >← Back to the portfolio</a
+      >
+      <p class="eyebrow" style="margin-top: 35px">
+        <span class="accent">[ 04 ]</span> BACKEND / RELATIONAL DATA
+      </p>
+      <h1>Financial Portfolio System</h1>
+      <p class="detail-lead">
+        A database and ingestion prototype exploring how market data, investment
+        records, and financial reporting fit together.
+      </p>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">MySQL</span
+        ><span class="tag">SQL</span><span class="tag">yfinance</span>
+      </div>
+      <section class="detail-section" aria-labelledby="implementation-title">
+        <h2 id="implementation-title">Inside the project.</h2>
+        <ul>
+          <li>
+            Designed related MySQL tables for users, financial instruments,
+            investments, market history, and reports.
+          </li>
+          <li>
+            Wrote a Python ingestion script for historical daily OHLCV data
+            across 25 configured stock tickers, using parameterized database
+            inserts.
+          </li>
+          <li>
+            Added analytical SQL queries covering invested capital, holdings,
+            price comparisons, volume, and daily price ranges.
+          </li>
+        </ul>
+      </section>
+      <section class="detail-section" aria-labelledby="scope-title">
+        <p class="eyebrow accent">SCOPE / CONTEXT</p>
+        <h2 id="scope-title">What this work represents.</h2>
+        <p>
+          A schema, ingestion script, and analytical-query prototype. It does
+          not include a deployed application, authentication service, live
+          streaming feed, or portfolio optimizer.
+        </p>
+        <a
+          class="button button-primary"
+          href="https://github.com/karisheen/Financial-Management-Portfolio-System"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Explore repository ↗</a
+        >
+      </section>
+      <footer class="footer">
+        <span>DAKARI ANTOINE / PROJECT NOTES</span
+        ><a href="./index.html#contact">OPEN A CHANNEL ↗</a>
+      </footer>
+    </main>
+  </body>
 </html>

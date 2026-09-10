@@ -1,118 +1,869 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Dakari Antoine</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./styles/main.css">
-    </head>
-    <body>
-        <div id="container--main">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10120f" />
+    <meta
+      name="description"
+      content="Dakari Antoine — backend software engineer at Charles Schwab. Exploring quantitative finance, market data systems, and applied machine learning."
+    />
+    <meta property="og:title" content="Dakari Antoine — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Backend engineering. Quantitative curiosity. Explore my systems, research, and experiments."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://karisheen.github.io/" />
+    <meta
+      property="og:image"
+      content="https://karisheen.github.io/assets/images/profile_picture.jpeg"
+    />
+    <title>Dakari Antoine — Software Engineer</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="./assets/fonts/space-grotesk-bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#" aria-label="Dakari Antoine, home"
+          ><span class="brand-mark" aria-hidden="true">d&gt;</span>
+          DAKARI.ANTOINE</a
+        >
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="nav-link" href="#work"><span>01</span> WORK</a>
+          <a class="nav-link" href="#experience"><span>02</span> EXPERIENCE</a>
+          <a class="nav-link" href="#about"><span>03</span> ABOUT</a>
+          <a class="nav-link" href="#contact"><span>04</span> CONTACT</a>
+        </nav>
+        <button
+          class="command-trigger"
+          type="button"
+          data-open-command
+          hidden
+          aria-haspopup="dialog"
+        >
+          <span>&gt;_ COMMAND</span><kbd aria-hidden="true">⌘ K</kbd>
+        </button>
+      </div>
+    </header>
 
-            <section id="wrapper--hero" class="section--page">
-                <img id="profile-pic" src="./assets/images/profile_picture.jpeg">
-
-                <div>
-                    <h1 id="user-name">Dakari Antoine</h1>
-                    <p id="bio">I graduated from Texas State University with a bachelor of science in computer science and a minor in applied mathematics. I am interested in using my technical skills in the finance industry, particularly quantitative finance</a>.</p>
-                    <p id="email">👉 dakariantoine@gmail.com</p>
-                </div>  
-            </section>
-
-            <section class="section--page">
-
-                <div id="socials--list">
-                    <a href="https://www.linkedin.com/in/dakari-antoine/" target="_blank">Linkedin</a>
-                    <a href="https://github.com/karisheen" target="_blank">Github</a>
-                    <a href="./assets/DakariAntoineResume(06_2025)_.pdf" target="_blank">Download Resume</a>
-                </div>
-            </section>
-
-            <section id="work-history-wrapper" class="section--page">
-                <h2>Education</h2>
-            
-                <div class="line-break"></div>
-                <div class="card--work-history">
-                    <strong>🏫 Texas State University | BS Computer Science</strong>
-                    <p>08/2020 - 05/09/2024</p>
-                </div>
-            
-                <div class="line-break"></div>
-            
-                <div class="card--work-history">
-                    <strong>🏫 Austin Community College | AS Computer Science</strong>
-                    <p>08/2018 - 12/2020</p>
-                </div>
-            </section>
-
-                <section id="work-history-wrapper" class="section--page">
-                    <h2>Work History</h2>
-                
-                    <div class="line-break"></div>
-                    <div class="card--work-history">
-                        <strong>🚧 Software Engineer Intern | Charles Schwab</strong>
-                        <p>06/2021 - 08/2021</p>
-                        <ul>
-                            <li>Engineered and deployed dark mode compatibility for the Schwab Retirement App on Android, enhancing user
-                                experience and aligning with modern UI/UX standards.</li>
-                            <li>Enhanced the app's user interface by integrating a corporate-standard design library, ensuring a consistent and visually engaging
-                                user experience across the platform.</li>
-                            <li>Wrote Kotlin and XML scripts to automate UI behaviors and apply consistent theming</li>
-                            <li>Used Jira and Bitbucket for agile sprint tracking and collaboration</li>
-                        </ul>
-                    </div>
-                
-                    <div class="line-break"></div>
-                
-                    <div class="card--work-history">
-                        <strong>🚧 Round Rock Sports Center | Building Manager</strong>
-                        <p>01/2014 - 06/2021</p>
-                        <ul>
-                            <li>Reduced time of writing down number of customers inside facility at a specific time by creating an excel
-                                spreadsheet to allow data entry of the number of customers</li>
-                            <li>Interacted with over 200 customers per day and ensures operations are running smoothly</li>
-                            <li>Provided administrative support for facility operations and events by scheduling and taking payment for
-                                reservations</li>
-                            <li>Coordinated the set up and take down of equipment by managing two or more employees and delegating tasks</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section class="section--page">
-                    <h2>Projects</h2>
-                
-                    <div class="card--project">
-                        <a href="project1.html"><span>🏆 </span>Coronavirus Stat Tracker Voice Assistant</a>
-                    </div>
-                
-                    <div class="card--project">
-                        <a href="project2.html" ><span>🏆 </span>Black Scholes Model Option Pricer</a>
-                    </div>
-
-                    <div class="card--project">
-                        <a href="project3.html" ><span>🏆 </span>Financial Management Portfolio System</a>
-                    </div>
-
-                    <div class="card--project">
-                        <a href="project4.html" ><span>🏆 </span>Lung Cancer Likelihood Prediction System</a>
-                    </div>
-                </section>
-
-                <section class="section--page">
-                    <h2>Technical Skills</h2>
-                    <ul id="qualifications--list">
-                        <li>✔️ Languages: C, C++, Go, Java, Kotlin, MATLAB, PowerShell (basic), Python, SQL</li>
-                        <li>✔️ Operating Systems: Linux (Ubuntu), MacOS, Windows</li>
-                        <li>✔️ Developer Tools: Android Studio, Bitbucket, Git, GitHub, Jupyter Notebook, MySQL, Oracle Database, Sublime, VS Code</li>
-                        <li>✔️ Libraries: MatPlotLib, NumPy, Pandas, Plotly, PyTorch, Scikit-learn, Seaborn, Yfinance</li>
-                    </ul>
-                </section>  
-
-
-            
+    <main id="main" class="shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-topline">
+          <div class="eyebrow status">
+            <span class="status-dot" aria-hidden="true"></span> SOFTWARE
+            ENGINEER @ CHARLES SCHWAB
+          </div>
+          <span class="eyebrow">PERSONAL PORTFOLIO / 2026</span>
         </div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow hero-kicker">
+              BACKEND ENGINEERING. QUANTITATIVE CURIOSITY.
+            </p>
+            <h1 id="hero-title">
+              <span>DAKARI</span>
+              <span class="name-last"
+                >ANTOINE<span class="cursor" aria-hidden="true"></span
+              ></span>
+            </h1>
+            <p class="hero-description">
+              I build behind the interface.<br /><strong
+                >Software engineer. Systems thinker.</strong
+              ><br />Exploring the intersection of code, financial markets, and
+              applied mathematics.
+            </p>
+            <p class="print-contact">
+              <a href="mailto:dakariantoine@gmail.com"
+                >dakariantoine@gmail.com</a
+              >
+              ·
+              <a href="https://github.com/karisheen">github.com/karisheen</a> ·
+              <a href="https://www.linkedin.com/in/dakari-antoine/"
+                >LinkedIn: dakari-antoine</a
+              >
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work"
+                >Explore my work
+                <span class="arrow" aria-hidden="true">↗</span></a
+              >
+              <a
+                class="button button-secondary"
+                href="https://github.com/karisheen"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub <span class="arrow" aria-hidden="true">↗</span></a
+              >
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <span class="art-label"
+              >FIG. 001 / THE SIGNAL FIELD<br />MATHEMATICS → SYSTEMS</span
+            >
+            <img
+              class="orbital-art"
+              src="./assets/images/signal-field.svg"
+              alt=""
+              width="520"
+              height="520"
+              fetchpriority="high"
+            />
+            <div class="art-caption">
+              <span
+                >TURNING COMPLEXITY<br /><strong
+                  >INTO SOMETHING USEFUL.</strong
+                ></span
+              ><span class="art-coordinates"
+                >CODE / MARKETS / MODELS<br />INDEPENDENT EXPLORATION</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="interest-strip" aria-label="Areas of interest">
+          <div><span>01 /</span> BACKEND SYSTEMS</div>
+          <div><span>02 /</span> QUANTITATIVE FINANCE</div>
+          <div><span>03 /</span> APPLIED MACHINE LEARNING</div>
+        </div>
+      </section>
 
-    </body>
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">
+              <span class="accent">01 /</span> SELECTED SYSTEMS & EXPERIMENTS
+            </p>
+            <h2 id="work-title">
+              Less theory.<br /><em>More source code.</em>
+            </h2>
+          </div>
+          <p>
+            A selection of my work in financial systems, data engineering, and
+            machine learning. Ranked by engineering depth and relevance to what
+            I build.
+          </p>
+        </div>
+        <div class="project-toolbar" hidden id="project-toolbar">
+          <div
+            class="filters"
+            role="group"
+            aria-label="Filter projects by interest"
+          >
+            <button
+              class="filter"
+              type="button"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              ALL WORK
+            </button>
+            <button
+              class="filter"
+              type="button"
+              data-filter="backend"
+              aria-pressed="false"
+            >
+              BACKEND
+            </button>
+            <button
+              class="filter"
+              type="button"
+              data-filter="quant"
+              aria-pressed="false"
+            >
+              QUANT / FINANCE
+            </button>
+            <button
+              class="filter"
+              type="button"
+              data-filter="ml"
+              aria-pressed="false"
+            >
+              ML / DATA
+            </button>
+          </div>
+          <span class="project-count" id="project-count" role="status"
+            >07 PROJECTS INDEXED</span
+          >
+        </div>
+        <div class="project-grid">
+          <article
+            class="project-card project-featured"
+            data-categories="backend quant"
+            id="prediction-market"
+          >
+            <div>
+              <div class="project-meta">
+                <span class="project-rank">[ 01 ] FLAGSHIP PROJECT</span
+                ><span>RESEARCH SYSTEM</span>
+              </div>
+              <h3>Prediction Market System</h3>
+              <p>
+                From market data to a defensible decision. A crypto
+                prediction-market research pipeline combining Kalshi, Coinbase,
+                and Deribit inputs with probability models, walk-forward
+                backtesting, and an auditable SQLite record.
+              </p>
+              <div class="tags">
+                <span class="tag">Python</span><span class="tag">HTTPX</span
+                ><span class="tag">Pydantic</span
+                ><span class="tag">SQLite</span>
+              </div>
+              <div class="project-bottom">
+                <a
+                  class="text-link"
+                  href="https://github.com/karisheen/Prediction-Market-System"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Explore repository <span aria-hidden="true">↗</span></a
+                >
+              </div>
+              <div class="project-reason">
+                WHY IT LEADS / Typed data, point-in-time research, fee-aware
+                simulated fills, and explicit risk controls. Research only; no
+                trade execution.
+              </div>
+            </div>
+            <div
+              class="project-diagram"
+              aria-label="Architecture: public market data feeds probability models, walk-forward validation, and a SQLite audit trail."
+            >
+              <div class="diagram-header">
+                <span>RESEARCH ARCHITECTURE</span
+                ><span class="accent">READ-ONLY</span>
+              </div>
+              <div class="pipeline" aria-hidden="true">
+                <div class="pipeline-node">
+                  MARKET INPUTS<span>KALSHI / COINBASE / DERIBIT</span>
+                </div>
+                <span class="pipeline-arrow">→</span>
+                <div class="pipeline-node">
+                  MODEL ENGINE<span>PROBABILITY / CALIBRATION</span>
+                </div>
+              </div>
+              <svg viewBox="0 0 400 72" fill="none" aria-hidden="true">
+                <path
+                  d="M0 55H400M0 30H400M0 5H400"
+                  stroke="#344428"
+                  stroke-dasharray="2 5"
+                />
+                <path
+                  d="M0 60L25 57L48 61L68 47L95 52L115 37L140 43L159 34L185 40L207 20L231 31L256 21L282 27L310 10L336 18L361 8L400 3"
+                  stroke="#c4f564"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M0 60L25 57L48 61L68 47L95 52L115 37L140 43L159 34L185 40L207 20L231 31L256 21L282 27L310 10L336 18L361 8L400 3V72H0Z"
+                  fill="#c4f564"
+                  fill-opacity=".04"
+                />
+              </svg>
+              <div class="diagram-footer">
+                <b>01</b> INGEST &nbsp;→&nbsp; <b>02</b> EVALUATE &nbsp;→&nbsp;
+                <b>03</b> AUDIT<br />WALK-FORWARD VALIDATION / SQLITE
+                EVIDENCE<br />ILLUSTRATIVE SIGNAL — NOT PERFORMANCE DATA
+              </div>
+            </div>
+          </article>
+          <article
+            class="project-card"
+            data-categories="backend quant"
+            id="order-book"
+          >
+            <div class="project-meta">
+              <span class="project-rank">[ 02 ]</span
+              ><span>MARKET DATA / VISUALIZATION</span>
+            </div>
+            <h3>Live Crypto Order Book</h3>
+            <p>
+              Five exchanges. One normalized view. A Streamlit dashboard with
+              threaded WebSocket feeds, REST fallback, stale-feed reporting,
+              depth charts, and liquidity heatmaps. Market observation, not
+              order matching.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">WebSockets</span
+              ><span class="tag">Streamlit</span><span class="tag">Plotly</span>
+            </div>
+            <div class="project-bottom">
+              <a
+                class="text-link"
+                href="https://github.com/karisheen/Limit-Orderbook"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Explore repository <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <div class="project-reason">
+              THE SIGNAL / Concurrent ingestion, feed resilience, and useful
+              financial visualization.
+            </div>
+          </article>
+          <article
+            class="project-card"
+            data-categories="quant"
+            id="black-scholes"
+          >
+            <div class="project-meta">
+              <span class="project-rank">[ 03 ]</span
+              ><span>QUANTITATIVE MODELING</span>
+            </div>
+            <h3>Black–Scholes Option Pricer</h3>
+            <p>
+              Financial mathematics you can interact with. European call and put
+              pricing in Python, with a Dash dashboard, Yahoo Finance inputs,
+              historical-volatility estimates, and Plotly sensitivity charts.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">SciPy</span
+              ><span class="tag">Dash</span><span class="tag">yfinance</span>
+            </div>
+            <div class="project-bottom">
+              <a
+                class="text-link"
+                href="https://github.com/karisheen/Black-Scholes-Pricing-Model"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Explore repository <span aria-hidden="true">↗</span></a
+              ><a class="text-link" href="./project2.html">Notes ↗</a>
+            </div>
+            <div class="project-reason">
+              THE SIGNAL / Turning a mathematical model into an explorable tool.
+              Try the browser lab below.
+            </div>
+          </article>
+          <article
+            class="project-card"
+            data-categories="backend quant"
+            id="portfolio-system"
+          >
+            <div class="project-meta">
+              <span class="project-rank">[ 04 ]</span
+              ><span>DATABASE / DATA PIPELINE</span>
+            </div>
+            <h3>Financial Portfolio System</h3>
+            <p>
+              A relational foundation for investment analysis. A MySQL prototype
+              connecting users, instruments, holdings, and reports, with Python
+              ingestion of historical stock data and analytical SQL queries.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">MySQL</span
+              ><span class="tag">SQL</span><span class="tag">yfinance</span>
+            </div>
+            <div class="project-bottom">
+              <a
+                class="text-link"
+                href="https://github.com/karisheen/Financial-Management-Portfolio-System"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Explore repository <span aria-hidden="true">↗</span></a
+              ><a class="text-link" href="./project3.html">Notes ↗</a>
+            </div>
+            <div class="project-reason">
+              THE SIGNAL / Relational modeling and market-data ingestion, close
+              to my backend focus.
+            </div>
+          </article>
+          <article
+            class="project-card"
+            data-categories="ml"
+            id="analyst-assist"
+          >
+            <div class="project-meta">
+              <span class="project-rank">[ 05 ]</span
+              ><span>APPLIED NLP / PROTOTYPE</span>
+            </div>
+            <h3>Analyst Assist</h3>
+            <p>
+              A transparent text-triage experiment. TF-IDF and logistic
+              regression classify a subset of 20 Newsgroups; spaCy adds named
+              entities, with keywords and heuristic prioritization exported to
+              CSV and HTML.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span
+              ><span class="tag">scikit-learn</span
+              ><span class="tag">spaCy</span><span class="tag">Jupyter</span>
+            </div>
+            <div class="project-bottom">
+              <a
+                class="text-link"
+                href="https://github.com/karisheen/Analyst-Assit-NLP"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Explore repository <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <div class="project-reason">
+              THE SIGNAL / Interpretable NLP from features to analyst artifacts.
+              Proxy-data demonstration, not validated risk detection.
+            </div>
+          </article>
+        </div>
+        <div class="project-archive" id="project-archive">
+          <article class="archive-row" data-categories="ml" id="lung-research">
+            <span class="project-rank">[06]</span>
+            <h3>Synthetic Health ML</h3>
+            <p>
+              Collaborative lung-cancer modeling research. Synthetic data; not a
+              clinical tool.
+            </p>
+            <a
+              class="text-link"
+              href="./project4.html"
+              aria-label="Read notes on synthetic health machine learning"
+              >Read notes ↗</a
+            >
+          </article>
+          <article
+            class="archive-row"
+            data-categories="backend"
+            id="voice-assistant"
+          >
+            <span class="project-rank">[07]</span>
+            <h3>COVID Voice Assistant</h3>
+            <p>
+              An early experiment connecting speech recognition, ParseHub data,
+              and spoken answers.
+            </p>
+            <a
+              class="text-link"
+              href="./project1.html"
+              aria-label="Read notes on the COVID voice assistant"
+              >Read notes ↗</a
+            >
+          </article>
+        </div>
+        <p class="ranking-note">
+          CURATION LOG / All 8 public repositories reviewed, including this
+          portfolio. 7 projects ranked by depth, completeness, and fit—not
+          stars. Research and prototypes are labeled as such.
+        </p>
+      </section>
+
+      <section class="section lab-section" id="lab" aria-labelledby="lab-title">
+        <div class="lab">
+          <div class="lab-header">
+            <div>
+              <p class="eyebrow accent">INTERACTIVE / QUANT SANDBOX</p>
+              <h2 id="lab-title">Put a little theory to work.</h2>
+              <p>
+                What happens to an option when the market moves? Change the
+                assumptions and explore the Black–Scholes model right here.
+              </p>
+            </div>
+            <span class="lab-tag">LOCAL COMPUTATION / NO API</span>
+          </div>
+          <div class="lab-grid" id="lab-controls" hidden>
+            <div>
+              <div class="range-control">
+                <label class="range-label" for="spot"
+                  >UNDERLYING PRICE
+                  <output id="spot-value" for="spot">$100</output></label
+                ><input
+                  id="spot"
+                  type="range"
+                  min="50"
+                  max="150"
+                  step="1"
+                  value="100"
+                />
+                <div class="range-extents" aria-hidden="true">
+                  <span>$50</span><span>$150</span>
+                </div>
+              </div>
+              <div class="range-control">
+                <label class="range-label" for="volatility"
+                  >ANNUAL VOLATILITY
+                  <output id="volatility-value" for="volatility"
+                    >20%</output
+                  ></label
+                ><input
+                  id="volatility"
+                  type="range"
+                  min="5"
+                  max="80"
+                  step="1"
+                  value="20"
+                />
+                <div class="range-extents" aria-hidden="true">
+                  <span>5%</span><span>80%</span>
+                </div>
+              </div>
+              <div class="lab-assumptions">
+                FIXED PARAMETERS<br />STRIKE $100 &nbsp; / &nbsp; EXPIRY 1
+                YEAR<br />RISK-FREE RATE 5% &nbsp; / &nbsp; DIVIDENDS 0%
+              </div>
+            </div>
+            <div>
+              <div class="lab-results" role="status" aria-atomic="true">
+                <div>
+                  <span class="eyebrow">EUROPEAN CALL</span
+                  ><output
+                    class="lab-price call"
+                    id="call-value"
+                    for="spot volatility"
+                    >$10.45</output
+                  >
+                </div>
+                <div>
+                  <span class="eyebrow">EUROPEAN PUT</span
+                  ><output
+                    class="lab-price"
+                    id="put-value"
+                    for="spot volatility"
+                    >$5.57</output
+                  >
+                </div>
+              </div>
+              <svg
+                class="price-chart"
+                viewBox="0 0 480 175"
+                role="img"
+                aria-labelledby="chart-title chart-desc"
+              >
+                <title id="chart-title">
+                  Call value as the underlying price changes
+                </title>
+                <desc id="chart-desc">
+                  The curve shows theoretical call values from $50 to $150 at
+                  the selected volatility. The dot marks your selected price.
+                </desc>
+                <g stroke="#3c492d" stroke-dasharray="2 5">
+                  <path d="M32 15H463M32 65H463M32 115H463" />
+                </g>
+                <path d="M32 15V140H463" fill="none" stroke="#60724a" />
+                <g fill="#a1a899" font-size="9" font-family="monospace">
+                  <text x="32" y="161">$50</text>
+                  <text x="230" y="161">$100</text>
+                  <text x="437" y="161">$150</text>
+                  <text id="chart-max" x="0" y="18">$60</text>
+                  <text x="8" y="142">$0</text>
+                </g>
+                <path id="chart-area" fill="#c4f564" fill-opacity=".06" />
+                <path
+                  id="chart-line"
+                  fill="none"
+                  stroke="#c4f564"
+                  stroke-width="2"
+                />
+                <path
+                  id="chart-guide"
+                  fill="none"
+                  stroke="#c4f564"
+                  stroke-opacity=".4"
+                  stroke-dasharray="3 4"
+                />
+                <circle
+                  id="chart-point"
+                  r="4"
+                  fill="#c4f564"
+                  stroke="#161d10"
+                  stroke-width="2"
+                />
+              </svg>
+              <div class="chart-caption">
+                <span class="chart-key">CALL VALUE</span
+                ><span>UNDERLYING PRICE →</span>
+              </div>
+            </div>
+          </div>
+          <noscript
+            ><p class="noscript-note">
+              Enable JavaScript to use the pricing sandbox. You can still
+              explore the
+              <a class="text-link" href="./project2.html"
+                >Black–Scholes project notes ↗</a
+              >.
+            </p></noscript
+          >
+          <p class="lab-disclaimer">
+            Educational browser reimplementation inspired by my Python project.
+            Theoretical European options with constant volatility and no
+            dividends. Illustrative assumptions—not market quotes, a forecast,
+            or financial advice.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">
+              <span class="accent">02 /</span> EXECUTION HISTORY
+            </p>
+            <h2 id="experience-title">
+              Where I put<br /><em>the work in.</em>
+            </h2>
+          </div>
+          <p>
+            From keeping real-world operations running to building the software
+            behind them.
+          </p>
+        </div>
+        <div class="experience-list">
+          <article class="experience-item">
+            <div class="experience-date">
+              <span class="current-label">CURRENT ROLE</span><br /><time
+                datetime="2026-06"
+                >JUN 2026</time
+              >
+              — PRESENT
+            </div>
+            <div class="experience-content">
+              <div class="experience-title">
+                <h3>Charles Schwab</h3>
+                <span>FULL-TIME</span>
+              </div>
+              <p class="experience-role">SOFTWARE ENGINEER / BACKEND</p>
+              <p>
+                Working as a full-time backend software engineer, developing
+                with C# and .NET.
+              </p>
+              <div class="tags">
+                <span class="tag">C#</span><span class="tag">.NET</span
+                ><span class="tag">Backend Engineering</span>
+              </div>
+            </div>
+          </article>
+          <article class="experience-item">
+            <div class="experience-date">
+              <time datetime="2014-01">JAN 2014</time> —
+              <time datetime="2026-05">MAY 2026</time>
+            </div>
+            <div class="experience-content">
+              <div class="experience-title">
+                <h3>Round Rock Sports Center</h3>
+                <span>OPERATIONS</span>
+              </div>
+              <p class="experience-role">BUILDING MANAGER</p>
+              <p>
+                Managed day-to-day facility operations, reservations, and event
+                setups. Coordinated staff, served more than 200 customers a day,
+                and built an Excel-based system to streamline attendance
+                tracking. Concluded the role in May 2026.
+              </p>
+              <div class="tags">
+                <span class="tag">Team Coordination</span
+                ><span class="tag">Process Improvement</span
+                ><span class="tag">Operations</span>
+              </div>
+            </div>
+          </article>
+          <article class="experience-item">
+            <div class="experience-date">
+              <time datetime="2021-06">JUN 2021</time> —
+              <time datetime="2021-08">AUG 2021</time>
+            </div>
+            <div class="experience-content">
+              <div class="experience-title">
+                <h3>Charles Schwab</h3>
+                <span>INTERNSHIP</span>
+              </div>
+              <p class="experience-role">SOFTWARE ENGINEER INTERN / ANDROID</p>
+              <p>
+                Implemented dark-mode compatibility for the Schwab Retirement
+                Android app and integrated a corporate design library. Used
+                Kotlin and XML for UI behavior and theming, with Jira and
+                Bitbucket for sprint collaboration.
+              </p>
+              <div class="tags">
+                <span class="tag">Kotlin</span><span class="tag">XML</span
+                ><span class="tag">Android</span
+                ><span class="tag">Bitbucket</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">
+              <span class="accent">03 /</span> THE PERSON BEHIND THE PROMPT
+            </p>
+            <h2 id="about-title">
+              Curiosity is<br /><em>the common thread.</em>
+            </h2>
+          </div>
+        </div>
+        <div class="about-grid">
+          <div>
+            <div class="profile-card">
+              <img
+                class="profile-image"
+                src="./assets/images/profile_picture.jpeg"
+                width="120"
+                height="142"
+                alt="Dakari Antoine"
+                loading="lazy"
+              />
+              <div>
+                <h3>Dakari Antoine</h3>
+                <p>
+                  SOFTWARE ENGINEER<br /><span class="accent">@karisheen</span
+                  ><br />CODE + APPLIED MATH
+                </p>
+              </div>
+            </div>
+            <p class="about-copy">
+              I'm interested in what happens when software meets financial
+              markets—and how mathematics helps us make sense of both.
+            </p>
+            <p>
+              My projects follow that curiosity: market-data pipelines,
+              quantitative models, and experiments in machine learning. My
+              day-to-day focus is backend engineering with C# and .NET.
+            </p>
+          </div>
+          <div>
+            <div class="stack-row">
+              <span class="eyebrow">AT WORK</span>
+              <p>C# &nbsp; / &nbsp; .NET &nbsp; / &nbsp; Backend Engineering</p>
+            </div>
+            <div class="stack-row">
+              <span class="eyebrow">IN MY PROJECTS</span>
+              <p>
+                Python &nbsp; / &nbsp; SQL &nbsp; / &nbsp; MySQL &nbsp; / &nbsp;
+                SQLite<br />HTTPX &nbsp; / &nbsp; Pydantic &nbsp; / &nbsp;
+                WebSockets<br />Dash &nbsp; / &nbsp; Streamlit &nbsp; / &nbsp;
+                Plotly
+              </p>
+            </div>
+            <div class="stack-row">
+              <span class="eyebrow">DATA & MODELS</span>
+              <p>
+                NumPy &nbsp; / &nbsp; Pandas &nbsp; / &nbsp; SciPy<br />scikit-learn
+                &nbsp; / &nbsp; XGBoost &nbsp; / &nbsp; spaCy
+              </p>
+            </div>
+            <div class="education">
+              <p class="eyebrow accent">EDUCATION / FOUNDATIONS</p>
+              <p>
+                <strong>Texas State University</strong><br />BS, Computer
+                Science · Minor, Applied Mathematics<br /><span
+                  >AUG 2020 — MAY 2024</span
+                >
+              </p>
+              <p>
+                <strong>Austin Community College</strong><br />AS, Computer
+                Science<br /><span>AUG 2018 — DEC 2020</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-top">
+          <div>
+            <p class="eyebrow">
+              <span class="accent">04 /</span> OPEN A CHANNEL
+            </p>
+            <h2 id="contact-title">
+              Good systems.<br /><span>Better conversations.</span>
+            </h2>
+            <a class="contact-mail" href="mailto:dakariantoine@gmail.com"
+              >dakariantoine@gmail.com</a
+            >
+          </div>
+          <span class="contact-symbol" aria-hidden="true">↗</span>
+        </div>
+        <div class="contact-links">
+          <a class="button button-primary" href="mailto:dakariantoine@gmail.com"
+            >Say hello <span aria-hidden="true">↗</span></a
+          ><a
+            class="button button-secondary"
+            href="https://www.linkedin.com/in/dakari-antoine/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn ↗</a
+          ><a
+            class="button button-secondary"
+            href="https://github.com/karisheen"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub ↗</a
+          ><button
+            class="button button-secondary"
+            id="copy-email"
+            type="button"
+            hidden
+          >
+            Copy email +</button
+          ><button
+            class="button button-secondary"
+            id="print-profile"
+            type="button"
+            hidden
+          >
+            Print / save profile ↓
+          </button>
+        </div>
+        <p class="copy-status" id="copy-status" role="status"></p>
+      </section>
+      <footer class="footer">
+        <span>© 2026 DAKARI ANTOINE / BUILT WITH INTENT</span
+        ><span>PERSONAL WORK. VIEWS ARE MY OWN.</span
+        ><a href="#">BACK TO TOP ↑</a>
+      </footer>
+    </main>
+
+    <dialog
+      class="command-dialog"
+      id="command-dialog"
+      aria-labelledby="command-title"
+    >
+      <div class="command-header">
+        <h2 id="command-title">
+          <span class="accent">&gt;_</span> PORTFOLIO COMMAND MENU
+        </h2>
+        <button
+          class="command-close"
+          id="command-close"
+          type="button"
+          aria-label="Close command menu"
+        >
+          ESC / CLOSE
+        </button>
+      </div>
+      <label class="command-label" for="command-input"
+        >Search a section, project, or action</label
+      >
+      <div class="command-input-wrap">
+        <span aria-hidden="true">&gt;</span
+        ><input
+          class="command-input"
+          id="command-input"
+          type="search"
+          placeholder="Try “quant”, “experience”, or “email”"
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </div>
+      <ul class="command-list" id="command-list"></ul>
+      <p class="command-empty" id="command-empty" hidden>
+        No matching commands. Try “work” or “contact”.
+      </p>
+      <p class="command-hint">
+        ↑ ↓ NAVIGATE &nbsp; / &nbsp; ENTER SELECT &nbsp; / &nbsp; ESC CLOSE
+      </p>
+    </dialog>
+  </body>
 </html>
