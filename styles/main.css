@@ -644,11 +644,6 @@ h1 .name-last {
 .archive-row .project-rank {
   font: 11px var(--mono);
 }
-.ranking-note {
-  font: 10px/1.8 var(--mono);
-  color: var(--muted);
-  margin: 19px 0 0;
-}
 .lab {
   border: 1px solid #607b38;
   background: #161d10;
@@ -1508,9 +1503,6 @@ input[type="range"] {
     font-size: 9px;
     gap: 5px;
   }
-  .ranking-note {
-    font-size: 9px;
-  }
   .lab {
     padding: 25px 22px;
   }
@@ -1669,7 +1661,6 @@ input[type="range"] {
   .project-diagram,
   .lab-section,
   .project-archive,
-  .ranking-note,
   .profile-image,
   .contact-symbol,
   .contact-links,

@@ -42,13 +42,15 @@
         <h2 id="implementation-title">Inside the project.</h2>
         <ul>
           <li>
-            Designed related MySQL tables for users, financial instruments,
-            investments, market history, and reports.
+            Defined MySQL tables for users, financial instruments, investments,
+            market history, and reports. Foreign keys link holdings and daily
+            prices to their instrument records.
           </li>
           <li>
             Wrote a Python ingestion script for historical daily OHLCV data
             across 25 configured stock tickers, using parameterized database
-            inserts.
+            inserts. Each instrument's stored current price is the latest
+            downloaded daily close, not a streaming quote.
           </li>
           <li>
             Added analytical SQL queries covering invested capital, holdings,

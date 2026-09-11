@@ -50,7 +50,8 @@
           </li>
           <li>
             Built a Dash interface with manual assumptions or Yahoo Finance
-            prices and historical-volatility estimates.
+            inputs. The data-backed mode estimates volatility from one year of
+            daily log returns, annualized using 252 trading days.
           </li>
           <li>
             Created Plotly charts for exploring option values across strike
@@ -63,9 +64,11 @@
         <h2 id="scope-title">What this work represents.</h2>
         <p>
           An educational, non-dividend-paying European-option model—not a
-          trading service or market-calibrated options engine. The embedded
-          portfolio lab is a separate browser implementation with explicitly
-          stated, fixed assumptions.
+          trading service or market-calibrated options engine. The data-backed
+          Dash mode uses an illustrative 2.5% risk-free rate and historical,
+          not option-implied, volatility. The embedded portfolio lab is a
+          separate browser implementation with explicitly stated, fixed
+          assumptions.
         </p>
         <a
           class="button button-primary"
