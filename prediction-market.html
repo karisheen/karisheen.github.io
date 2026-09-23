@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="theme-color" content="#f2efe8" />
+    <meta name="description" content="An engineering case study of an auditable, shadow-first prediction-market research system using Kalshi, Coinbase, Deribit, and SQLite." />
+    <title>Prediction Market System — Dakari Antoine</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">d&gt;</span> DAKARI.ANTOINE</a>
+        <a class="text-link" href="./index.html#work">ALL WORK ↗</a>
+      </div>
+    </header>
+    <main id="main" class="shell case-main">
+      <a class="text-link case-back" href="./index.html#prediction-market">← Back to the portfolio</a>
+      <header class="case-hero">
+        <aside class="case-index" aria-label="Project summary">
+          <p class="eyebrow accent">PROJECT FILE / 001</p>
+          <dl>
+            <div><dt>STATUS</dt><dd>SHADOW-FIRST RESEARCH</dd></div>
+            <div><dt>ROLE</dt><dd>INDEPENDENT SYSTEM DESIGN + ENGINEERING</dd></div>
+            <div><dt>INPUTS</dt><dd>KALSHI / COINBASE / DERIBIT</dd></div>
+            <div><dt>OUTPUT</dt><dd>SQLITE / OPTIONAL MANUAL REVIEW</dd></div>
+            <div><dt>EXECUTION</dt><dd>NONE / VENUES ARE READ-ONLY</dd></div>
+          </dl>
+        </aside>
+        <div class="case-intro">
+          <p class="eyebrow accent">CRYPTO PREDICTION-MARKET RESEARCH</p>
+          <h1>Prediction<br />Market System</h1>
+          <p class="case-lead">An auditable decision-support system for turning public market data into calibrated, cost-aware research candidates—without placing a trade.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">HTTPX</span><span class="tag">Pydantic</span><span class="tag">SQLite</span></div>
+          <div class="case-actions">
+            <a class="button button-primary" href="https://github.com/karisheen/Prediction-Market-System" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="case-status" aria-label="System at a glance">
+        <div><span>INPUT</span><strong>Point-in-time public data</strong></div>
+        <div><span>MODEL</span><strong>Structural + market anchored</strong></div>
+        <div><span>GATE</span><strong>Calibration + risk controls</strong></div>
+        <div><span>RECORD</span><strong>Append-oriented audit trail</strong></div>
+      </section>
+
+      <section class="case-section" aria-labelledby="problem-title">
+        <div class="case-section-label"><span>01</span> PROBLEM / RESPONSIBILITY</div>
+        <div class="case-copy">
+          <h2 id="problem-title">A probability is not evidence.</h2>
+          <p>The central problem was not generating a forecast. It was preserving what the system knew at decision time, keeping dense contracts from overstating independent evidence, and preventing a plausible model output from bypassing fees, liquidity, uncertainty, or exposure constraints.</p>
+          <p>I designed and implemented the data adapters, contract semantics, probability models, walk-forward replay, calibration gates, risk policy, audit store, command-line workflows, and operating checks as an independent engineering project.</p>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="architecture-title">
+        <div class="case-section-label"><span>02</span> ARCHITECTURE / DATA FLOW</div>
+        <div class="case-copy">
+          <h2 id="architecture-title">One path from source to evidence.</h2>
+          <div class="case-flow" aria-label="Kalshi, Coinbase, and Deribit data flows through contract parsing, probability modeling, risk gates, and into the SQLite audit store.">
+            <div class="case-flow-step"><b>01 / MARKET INPUTS</b><span>KALSHI / COINBASE / DERIBIT</span></div>
+            <span class="case-flow-arrow" aria-hidden="true">→</span>
+            <div class="case-flow-step"><b>02 / CONTRACT PARSER</b><span>FAIL CLOSED ON AMBIGUITY</span></div>
+            <span class="case-flow-arrow" aria-hidden="true">→</span>
+            <div class="case-flow-step"><b>03 / MODEL ENGINE</b><span>STRUCTURAL + MARKET ANCHOR</span></div>
+            <span class="case-flow-arrow" aria-hidden="true">→</span>
+            <div class="case-flow-step"><b>04 / RISK GATES</b><span>FEES / LIQUIDITY / UNCERTAINTY</span></div>
+            <span class="case-flow-arrow" aria-hidden="true">→</span>
+            <div class="case-flow-step"><b>05 / EVIDENCE</b><span>SQLITE / WATCH / MANUAL REVIEW</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="decisions-title">
+        <div class="case-section-label"><span>03</span> ENGINEERING DECISIONS</div>
+        <div class="case-copy">
+          <h2 id="decisions-title">Confidence is earned, not inherited.</h2>
+          <div class="case-decisions">
+            <article><span>DECISION 01</span><h3>Fail closed on semantics.</h3><p>Contracts are parsed into explicit range, threshold, or touch-barrier structures. Ambiguous resolution rules do not receive a forecast.</p></article>
+            <article><span>DECISION 02</span><h3>Group evidence by event.</h3><p>One outcome-weighted sample per structural model prevents hundreds of mutually exclusive ladder contracts from masquerading as independent outcomes.</p></article>
+            <article><span>DECISION 03</span><h3>Bind approval to identity.</h3><p>Model version, recipe fingerprint, data cadence, and deployment policy are separate identities. A profile fitted for different behavior cannot approve live delivery.</p></article>
+            <article><span>DECISION 04</span><h3>Make SQLite authoritative.</h3><p>Forecasts, exact input context, rejections, delivery state, and immutable run manifests remain inspectable even when Discord is disabled.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="evidence-title">
+        <div class="case-section-label"><span>04</span> VERIFICATION / EVIDENCE</div>
+        <div class="case-copy">
+          <h2 id="evidence-title">Replay before approval. Observe before claiming.</h2>
+          <ul class="case-evidence">
+            <li><strong>No-look-ahead replay</strong><span>Only outcomes settled by each training cutoff can calibrate the next non-overlapping test window.</span></li>
+            <li><strong>Conservative execution model</strong><span>Signals use executable quotes; fills use a later adverse candle extreme, whole contracts, and volume participation caps.</span></li>
+            <li><strong>Event-grouped calibration</strong><span>Probability and horizon regions carry held-out uncertainty; sparse or unsupported regions fail closed.</span></li>
+            <li><strong>Reproducible manifests</strong><span>Every run records git revision, source hashes, dataset boundaries, model recipe, engine configuration, and campaign identity.</span></li>
+            <li><strong>Forward shadow ledger</strong><span>Scheduled scans retain forecasts and reasons without sending an alert or executing a trade.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="case-section case-limitations" aria-labelledby="limitations-title">
+        <div class="case-section-label"><span>05</span> LIMITATIONS / NEXT EVIDENCE</div>
+        <div class="case-copy">
+          <h2 id="limitations-title">A research baseline, not a validated edge.</h2>
+          <p>The system is operationally focused on KXBTC and remains shadow-first. Candlestick volume constrains participation but cannot reconstruct order-book queue position or an exact fill path. Entry candidates are observations, not permission to trade.</p>
+          <p>Broader historical coverage, untouched forward observations across multiple regimes, independent review, and a separate execution and position-management system would be required before any real-money use.</p>
+        </div>
+      </section>
+      <nav class="case-next" aria-label="Next case study"><span>NEXT FILE / 002</span><a href="./limit-order-book.html">Live Crypto Order Book ↗</a></nav>
+      <footer class="footer"><span>DAKARI ANTOINE / ENGINEERING CASE STUDY</span><a href="./index.html#contact">OPEN A CHANNEL ↗</a></footer>
+    </main>
+  </body>
+</html>

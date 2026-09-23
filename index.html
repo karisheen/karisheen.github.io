@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
     <meta name="theme-color" content="#f2efe8" />
     <meta
       name="description"
@@ -224,6 +224,9 @@
                   rel="noopener noreferrer"
                   >Explore repository <span aria-hidden="true">↗</span></a
                 >
+                <a class="text-link" href="./prediction-market.html"
+                  >Case study <span aria-hidden="true">↗</span></a
+                >
               </div>
               <div class="project-reason">
                 Point-in-time replay models fees and liquidity-constrained fills.
@@ -299,6 +302,9 @@
                 rel="noopener noreferrer"
                 >Explore repository <span aria-hidden="true">↗</span></a
               >
+              <a class="text-link" href="./limit-order-book.html"
+                >Case study <span aria-hidden="true">↗</span></a
+              >
             </div>
             <div class="project-reason">
               Feeds older than 15 seconds are marked degraded. Cross-venue
@@ -314,15 +320,15 @@
               <span class="project-rank">[ 03 ]</span
               ><span>QUANTITATIVE MODELING</span>
             </div>
-            <h3>Black–Scholes Option Pricer</h3>
+            <h3>Quantitative Pricing Toolkit</h3>
             <p>
-              European call and put pricing in Python, with a Dash dashboard,
-              manual or Yahoo Finance inputs, historical-volatility estimates,
-              and Plotly charts across strikes and times to expiry.
+              Typed, vectorized Black–Scholes–Merton pricing with analytic
+              Greeks, safeguarded implied volatility, explicit boundary
+              behavior, invariant-based tests, and measured batch performance.
             </p>
             <div class="tags">
-              <span class="tag">Python</span><span class="tag">SciPy</span
-              ><span class="tag">Dash</span><span class="tag">yfinance</span>
+              <span class="tag">Python</span><span class="tag">NumPy</span
+              ><span class="tag">SciPy</span><span class="tag">Pytest</span>
             </div>
             <div class="project-bottom">
               <a
@@ -331,11 +337,11 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 >Explore repository <span aria-hidden="true">↗</span></a
-              ><a class="text-link" href="./project2.html">Notes ↗</a>
+              ><a class="text-link" href="./project2.html">Case study ↗</a>
             </div>
             <div class="project-reason">
-              Uses historical volatility, not option-implied calibration.
-              Educational European-option model; try the browser lab below.
+              European options with explicit model limits; numerical behavior is
+              tested at expiry, zero volatility, and extreme moneyness.
             </div>
           </article>
           <article

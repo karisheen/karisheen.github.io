@@ -5,14 +5,36 @@
   const filters = [...document.querySelectorAll("[data-filter]")];
   const archive = document.querySelector("#project-archive");
   const projectCount = document.querySelector("#project-count");
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
 
   function filterProjects(category) {
     let count = 0;
     for (const project of projectItems) {
-      project.hidden =
-        category !== "all" &&
-        !project.dataset.categories.split(" ").includes(category);
-      if (!project.hidden) count++;
+      const shouldShow =
+        category === "all" ||
+        project.dataset.categories.split(" ").includes(category);
+      const wasHidden = project.hidden;
+      for (const animation of project.getAnimations()) animation.cancel();
+      project.hidden = !shouldShow;
+      if (shouldShow) {
+        count++;
+        if (wasHidden) {
+          project.animate(
+            reduceMotion
+              ? [{ opacity: 0.75 }, { opacity: 1 }]
+              : [
+                  { opacity: 0.6, transform: "translateY(4px)" },
+                  { opacity: 1, transform: "translateY(0)" },
+                ],
+            {
+              duration: 180,
+              easing: "cubic-bezier(0.23, 1, 0.32, 1)",
+            },
+          );
+        }
+      }
     }
     for (const button of filters) {
       button.setAttribute(
@@ -125,12 +147,22 @@
   const email = "dakariantoine@gmail.com";
   const copyButton = document.querySelector("#copy-email");
   const copyStatus = document.querySelector("#copy-status");
+  function showCopyStatus(message) {
+    for (const animation of copyStatus.getAnimations()) animation.cancel();
+    copyStatus.textContent = message;
+    copyStatus.animate([{ opacity: 0.6 }, { opacity: 1 }], {
+      duration: 180,
+      easing: "cubic-bezier(0.23, 1, 0.32, 1)",
+    });
+  }
   async function copyEmail() {
     try {
       await navigator.clipboard.writeText(email);
-      copyStatus.textContent = "COPIED / Email address is on your clipboard.";
+      showCopyStatus("COPIED / Email address is on your clipboard.");
     } catch {
-      copyStatus.textContent = `COPY UNAVAILABLE / Select ${email} above or use “Say hello”.`;
+      showCopyStatus(
+        `COPY UNAVAILABLE / Select ${email} above or use “Say hello”.`,
+      );
     }
   }
   copyButton.hidden = false;
