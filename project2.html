@@ -4,42 +4,141 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
     <meta name="theme-color" content="#f2efe8" />
-    <meta name="description" content="An engineering case study of a typed, vectorized, and numerically defensive Black–Scholes–Merton pricing toolkit." />
-    <title>Quantitative Pricing Toolkit — Dakari Antoine</title>
+    <meta name="description" content="Options Lab connects typed option pricing, bid/ask implied volatility, historical book replay, and spread-aware research in the Quantitative Pricing Toolkit." />
+    <title>Options Lab — Dakari Antoine</title>
+    <link rel="canonical" href="https://karisheen.github.io/project2.html" />
+    <meta property="og:title" content="Options Lab — Dakari Antoine" />
+    <meta property="og:description" content="From safeguarded pricing to historical bid/ask research: an offline options workspace with explicit data quality and model boundaries." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://karisheen.github.io/project2.html" />
+    <meta property="og:image" content="https://karisheen.github.io/assets/images/options-lab.png" />
+    <meta property="og:image:width" content="2016" />
+    <meta property="og:image:height" content="1470" />
+    <meta property="og:image:alt" content="Options Lab public synthetic replay with an IV chain, volatility smile, and quoted butterfly diagnostics." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Options Lab — Dakari Antoine" />
+    <meta name="twitter:description" content="Typed numerical engineering meets point-in-time options research. Public synthetic dashboard, historical findings, and explicit limits." />
+    <meta name="twitter:image" content="https://karisheen.github.io/assets/images/options-lab.png" />
+    <meta name="twitter:image:alt" content="Public synthetic Options Lab replay, not live quotes or trading performance." />
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header"><div class="shell header-inner"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">d&gt;</span> DAKARI.ANTOINE</a><a class="text-link" href="./index.html#work">ALL WORK ↗</a></div></header>
-    <main id="main" class="shell case-main">
+    <main id="main" class="shell case-main case-feature">
       <a class="text-link case-back" href="./index.html#black-scholes">← Back to the portfolio</a>
       <header class="case-hero">
         <aside class="case-index" aria-label="Project summary">
           <p class="eyebrow accent">PROJECT FILE / 003</p>
           <dl>
-            <div><dt>STATUS</dt><dd>TYPED PRICING LIBRARY + APPLICATIONS</dd></div>
+            <div><dt>STATUS</dt><dd>OFFLINE RESEARCH + LOCAL DASH APP</dd></div>
             <div><dt>ROLE</dt><dd>INDEPENDENT NUMERICAL ENGINEERING</dd></div>
-            <div><dt>MODEL</dt><dd>BLACK–SCHOLES–MERTON</dd></div>
+            <div><dt>MODELS</dt><dd>BSM / BLACK-76 / CRR</dd></div>
             <div><dt>INTERFACES</dt><dd>PYTHON / CLI / DASH</dd></div>
-            <div><dt>SCOPE</dt><dd>EUROPEAN OPTIONS</dd></div>
+            <div><dt>DATA</dt><dd>HISTORICAL REPLAY / SYNTHETIC DEMO</dd></div>
           </dl>
         </aside>
         <div class="case-intro">
           <p class="eyebrow accent">QUANTITATIVE FINANCE / NUMERICAL SOFTWARE</p>
-          <h1>Quantitative<br />Pricing Toolkit</h1>
-          <p class="case-lead">A typed, vectorized implementation of Black–Scholes–Merton built around explicit conventions, stable boundaries, analytic risk, robust inversion, and measurable performance.</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">Pytest</span></div>
-          <div class="case-actions"><a class="button button-primary" href="https://github.com/karisheen/Black-Scholes-Pricing-Model" target="_blank" rel="noopener noreferrer">Explore repository ↗</a><a class="button button-secondary" href="./index.html#lab">Try browser lab ↗</a></div>
+          <h1>Options Lab</h1>
+          <p class="case-lead">The Quantitative Pricing Toolkit pairs typed pricing and risk with historical Deribit BTC/USDC options research. Options Lab makes reconstructed bid/ask books and model diagnostics inspectable in a local replay workspace.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">NumPy / SciPy</span><span class="tag">Dash</span><span class="tag">Historical research</span></div>
+          <div class="case-actions">
+            <a class="button button-primary" href="https://github.com/karisheen/Black-Scholes-Pricing-Model/blob/4c66ce6e98a04e29c920b977585cd6a704827a4e/README.md#options-lab-dashboard" target="_blank" rel="noopener noreferrer">Local demo instructions ↗</a>
+            <a class="button button-secondary" href="https://github.com/karisheen/Black-Scholes-Pricing-Model/tree/4c66ce6e98a04e29c920b977585cd6a704827a4e" target="_blank" rel="noopener noreferrer">Explore repository ↗</a>
+          </div>
+          <p><a class="text-link" href="./index.html#lab">Smaller browser pricing lab ↗</a></p>
         </div>
       </header>
-      <section class="case-status" aria-label="System at a glance"><div><span>PRICE</span><strong>Calls + puts + dividends</strong></div><div><span>RISK</span><strong>Five analytic Greeks</strong></div><div><span>INVERT</span><strong>Safeguarded implied vol</strong></div><div><span>SCALE</span><strong>NumPy broadcasting</strong></div></section>
-      <section class="case-section" aria-labelledby="pricing-problem-title"><div class="case-section-label"><span>01</span> PROBLEM / RESPONSIBILITY</div><div class="case-copy"><h2 id="pricing-problem-title">The formula is the easy part.</h2><p>A useful pricing library must define what happens at expiry, zero volatility, extreme moneyness, invalid no-arbitrage prices, and low-Vega inversion—not only reproduce one textbook result.</p><p>I implemented the pricing and Greeks, numerical boundary conventions, implied-volatility solver, vectorized API, CLI and Dash adapters, invariant-based tests, continuous integration, and benchmark methodology.</p></div></section>
-      <section class="case-section" aria-labelledby="pricing-architecture-title"><div class="case-section-label"><span>02</span> ARCHITECTURE / DEPENDENCY FLOW</div><div class="case-copy"><h2 id="pricing-architecture-title">The model does not depend on the interface.</h2><div class="case-flow" aria-label="Validated inputs flow into pricing and risk methods, then optional implied volatility, and finally through CLI, dashboard, or batch adapters."><div class="case-flow-step"><b>01 / INPUTS</b><span>FINITE / BROADCASTABLE</span></div><span class="case-flow-arrow" aria-hidden="true">→</span><div class="case-flow-step"><b>02 / CORE</b><span>PRICES + ANALYTIC GREEKS</span></div><span class="case-flow-arrow" aria-hidden="true">→</span><div class="case-flow-step"><b>03 / INVERSION</b><span>SAFEGUARDED ROOT SOLVE</span></div><span class="case-flow-arrow" aria-hidden="true">→</span><div class="case-flow-step"><b>04 / BATCH</b><span>NUMPY BROADCASTING</span></div><span class="case-flow-arrow" aria-hidden="true">→</span><div class="case-flow-step"><b>05 / ADAPTERS</b><span>CLI / DASH / PYTHON</span></div></div></div></section>
-      <section class="case-section" aria-labelledby="pricing-decisions-title"><div class="case-section-label"><span>03</span> ENGINEERING DECISIONS</div><div class="case-copy"><h2 id="pricing-decisions-title">Boundaries are part of the API.</h2><div class="case-decisions"><article><span>DECISION 01</span><h3>State the conventions.</h3><p>Expiry returns exact intrinsic value. The payoff-kink Delta is 0.5; non-finite distributional Greek limits are reported as zero.</p></article><article><span>DECISION 02</span><h3>Protect tail arithmetic.</h3><p>Out-of-the-money terms use log-space normal probabilities and <code>expm1</code> to reduce cancellation between nearly equal values.</p></article><article><span>DECISION 03</span><h3>Safeguard inversion.</h3><p>Implied volatility checks no-arbitrage bounds, expands a bracket, accepts Newton steps only in a safe interior, and otherwise bisects.</p></article><article><span>DECISION 04</span><h3>Separate core from adapters.</h3><p>The pricing package has no Dash or market-data dependency. Applications call the library; the dependency never points backward.</p></article></div></div></section>
-      <section class="case-section" aria-labelledby="pricing-evidence-title"><div class="case-section-label"><span>04</span> VERIFICATION / EVIDENCE</div><div class="case-copy"><h2 id="pricing-evidence-title">Use invariants where examples are too small.</h2><ul class="case-evidence"><li><strong>Independent checks</strong><span>Canonical values, central finite-difference Greeks, put–call parity, Greek identities, and no-arbitrage bounds.</span></li><li><strong>Boundary coverage</strong><span>Near expiry, zero volatility, negative rates, extreme moneyness, malformed arrays, and every documented solver failure.</span></li><li><strong>Scale invariance</strong><span>Identical economics quoted in dollars, cents, or normalized units recover the same implied volatility.</span></li><li><strong>Measured vectorization</strong><span>A reference run priced 10,000 heterogeneous calls in 1.644 ms versus 2.072 s in a validated scalar loop—about 1,261× on that machine, not a cross-machine guarantee.</span></li><li><strong>Quality gate</strong><span>Tests, Ruff, strict mypy, locked dependencies, package build, and multi-version CI.</span></li></ul></div></section>
-      <section class="case-section case-limitations" aria-labelledby="pricing-limitations-title"><div class="case-section-label"><span>05</span> LIMITATIONS / MODEL BOUNDARY</div><div class="case-copy"><h2 id="pricing-limitations-title">A transparent baseline, not a complete market model.</h2><p>The implementation covers European exercise with continuous dividends. It does not implement American exercise, discrete dividends, term structures, jumps, stochastic volatility, transaction costs, or arbitrage-checked volatility surfaces.</p><p>The homepage lab is a smaller browser reimplementation with fixed assumptions; the Python package is the authoritative numerical implementation.</p></div></section>
-      <nav class="case-next" aria-label="Next destination"><span>CONTINUE / INTERACTIVE</span><a href="./index.html#lab">Open the browser pricing lab ↗</a></nav>
+      <figure class="case-plate">
+        <img src="./assets/images/options-lab.png" width="2016" height="1470" decoding="async" alt="Public synthetic Options Lab: session and checkpoint selectors, linked IV chain and smile, a withheld sequence-gap quote, and quoted butterflies marked No quoted credit." />
+        <figcaption><strong>Public synthetic replay.</strong> Generated books pass through the production replay, IV, and SVI pipeline; no vendor data is shown. At this checkpoint, 19 of 20 requested contracts are usable: the 60,000-strike put is withheld for a missing, sequence-gapped book. “No quoted credit” describes this synthetic package, not historical performance. <a class="text-link" href="./assets/images/options-lab.png">View original ↗</a></figcaption>
+      </figure>
+      <section class="case-status" aria-label="System at a glance">
+        <div><span>PRICE</span><strong>Spot + forward models</strong></div>
+        <div><span>RECONSTRUCT</span><strong>Point-in-time books</strong></div>
+        <div><span>INSPECT</span><strong>Bid / midpoint / ask IV</strong></div>
+        <div><span>QUESTION</span><strong>Midpoint vs quoted cost</strong></div>
+      </section>
+
+      <section class="case-section" aria-labelledby="pricing-problem-title">
+        <div class="case-section-label"><span>01</span> PROBLEM / RESPONSIBILITY</div>
+        <div class="case-copy">
+          <h2 id="pricing-problem-title">A midpoint is not a trade.</h2>
+          <p>A pricing formula cannot establish whether a quote was available, correctly normalized, or usable on both sides. I built the numerical core, replay adapters, quality reports, and dashboard around those distinctions—not exchange marks treated as truth.</p>
+          <p>Black–Scholes–Merton prices European spot options with continuous dividends. Black-76 instead takes a forward and discount factor: historical linear BTC/USDC research uses the matching dated future’s fresh best bid/offer (BBO) midpoint, ACT/365F maturity, and an explicit rate assumption. Missing spot stays missing.</p>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="pricing-architecture-title">
+        <div class="case-section-label"><span>02</span> ARCHITECTURE / DATA FLOW</div>
+        <div class="case-copy">
+          <h2 id="pricing-architecture-title">Reconstruct first. Infer second.</h2>
+          <div class="case-flow" role="group" aria-label="Historical captures flow through point-in-time books, normalized quotes, IV and fit diagnostics, then the local workspace.">
+            <div class="case-flow-step"><b>01 / CAPTURE</b><span>RAW BOOK EVENTS</span></div>
+            <span class="case-flow-arrow" aria-hidden="true">→</span>
+            <div class="case-flow-step"><b>02 / REPLAY</b><span>AS-OF BBO</span></div>
+            <span class="case-flow-arrow" aria-hidden="true">→</span>
+            <div class="case-flow-step"><b>03 / NORMALIZE</b><span>UNITS + QUALITY</span></div>
+            <span class="case-flow-arrow" aria-hidden="true">→</span>
+            <div class="case-flow-step"><b>04 / ANALYZE</b><span>IV / SVI / SPREADS</span></div>
+            <span class="case-flow-arrow" aria-hidden="true">→</span>
+            <div class="case-flow-step"><b>05 / INSPECT</b><span>LOCAL REPORT / DASH</span></div>
+          </div>
+          <p>Typed, immutable market contracts separate models, replay, calibration, risk, and UI. Pricing never depends on Dash. Tardis supplies historical captures: its receipt clock records vendor observation, distinct from venue event time and file download time. Replay respects both clocks; broken sequence links invalidate affected books until a fresh snapshot. Prior-day catalog selection freezes strikes before inspecting option quotes.</p>
+          <p>Native prices, sizes, clocks, and flags survive normalization. Linear premiums are USDC per BTC; option quantities are contracts, futures quantities BTC. Missing, stale, crossed, or sequence-invalid observations remain inspectable but are withheld from dependent calculations—not replaced by older quotes.</p>
+          <details class="case-notes">
+            <summary>Calibration quality and provenance</summary>
+            <p>Bid, premium-midpoint, and ask IV are solved separately. SVI (Stochastic Volatility Inspired) models smile total variance by log-moneyness. Liquidity-weighted fits use eligible OTM midpoint observations, retaining rejections and residuals. Raw midpoint findings and fitted finite-grid strike, butterfly, and calendar checks remain separate; neither is a global arbitrage-free guarantee. <a class="text-link" href="https://github.com/karisheen/Black-Scholes-Pricing-Model/blob/4c66ce6e98a04e29c920b977585cd6a704827a4e/README.md#btcusdc-chain-and-iv-quality-report">Replay methodology ↗</a></p>
+          </details>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="pricing-decisions-title">
+        <div class="case-section-label"><span>03</span> NUMERICS / RISK</div>
+        <div class="case-copy">
+          <h2 id="pricing-decisions-title">Conventions are part of the result.</h2>
+          <p>Safeguarded IV inversion validates no-arbitrage bounds, brackets volatility, accepts safe Newton steps, and otherwise bisects. Scale-aware residuals and stopping reasons expose low-Vega uncertainty. Stable tails and explicit expiry/zero-volatility conventions protect boundary arithmetic.</p>
+          <p>Delta, Gamma, Vega, calendar Theta, and Rho carry units: Vega/Rho are per unit volatility/rate; Theta is per year. Forward risk is not spot risk. Portfolio aggregation applies signed quantities and multipliers, separates currencies, and supports scenario repricing, P&amp;L attribution, and limits.</p>
+          <details class="case-notes">
+            <summary>Independent exercise reference</summary>
+            <p>A separate CRR binomial tree checks European convergence and American exercise with grid-aligned, escrowed cash dividends. It does not extend analytic BSM’s assumptions. Exercise diagnostics are risk-neutral model outputs, not assignment forecasts. <a class="text-link" href="https://github.com/karisheen/Black-Scholes-Pricing-Model/blob/4c66ce6e98a04e29c920b977585cd6a704827a4e/IMPLEMENTATION_SUMMARY.md#design-decisions">Model and risk decisions ↗</a></p>
+          </details>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="pricing-workspace-title">
+        <div class="case-section-label"><span>04</span> WORKSPACE / INSPECTION</div>
+        <div class="case-copy">
+          <h2 id="pricing-workspace-title">One selection, linked evidence.</h2>
+          <p>Select session, expiry, and recorded checkpoint—not continuous playback. Chain IV/Premium/Greeks views and observed smile points link to contract detail, timestamps, solver diagnostics, and risk units. Put–call parity compares the bid/ask interval [call bid − put ask, call ask − put bid] with discounted (F − K), the forward-minus-strike value, using independent dated-future context—not a tradable midpoint. Midpoint warnings and quoted butterflies remain separate diagnostics.</p>
+          <p>CSV/JSON exports scope to the visible chain, IV observations, fitted slice, selected contract, or selected diagnostic, retaining cutoff and provenance. Selection does not refit the surface. The manual calculator remains separate; configured private reports never silently fall back to synthetic data.</p>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="pricing-evidence-title">
+        <div class="case-section-label"><span>05</span> VERIFICATION / EVIDENCE</div>
+        <div class="case-copy">
+          <h2 id="pricing-evidence-title">The useful result was negative.</h2>
+          <p><strong>Historical Deribit BTC/USDC options—not the screenshot:</strong> upstream reports 53 midpoint findings but zero negative quoted entry costs across 168 repeated triplet observations. Four short Tardis recordings from August–November 2026 first-of-month sessions, two expiries, and three checkpoints per day produced 24 expiry fits. These are repeated checks, not independent trials, filled trades, or proof of no arbitrage.</p>
+          <p>The scan buys wings at asks, sells centers at bids, handles unequal spacing and call/put substitutions, and crosses the future’s spread for its hedge. Missing legs reduce coverage. Costs exclude fees, slippage, latency, and simultaneous-fill uncertainty. <a class="text-link" href="https://github.com/karisheen/Black-Scholes-Pricing-Model/blob/4c66ce6e98a04e29c920b977585cd6a704827a4e/README.md#freeze-strikes-from-the-tardis-catalog">Historical sample findings ↗</a></p>
+          <details class="case-notes">
+            <summary>Numerical regressions and performance evidence</summary>
+            <p>Regressions cover reference prices, finite-difference Greeks, parity, bounds, scale-invariant IV, and causal late-arrival/gap recovery. <a class="text-link" href="https://github.com/karisheen/Black-Scholes-Pricing-Model/blob/4c66ce6e98a04e29c920b977585cd6a704827a4e/.github/workflows/ci.yml">Python 3.10/3.13 CI</a> runs tests, Ruff, strict mypy, and distribution builds with locked dependencies.</p>
+            <p>The <a class="text-link" href="https://github.com/karisheen/Black-Scholes-Pricing-Model/blob/4c66ce6e98a04e29c920b977585cd6a704827a4e/BENCHMARKS.md">reported reference benchmark</a> prices 10,000 heterogeneous calls: 2.072 seconds scalar versus 1.644 milliseconds batched, about 1,261× on CPython 3.13.5/NumPy 2.5.1. Both validate inputs and compare correctness before timing. This amortizes Python overhead; it is not dashboard latency or a portable speed guarantee.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="case-section case-limitations" aria-labelledby="pricing-limitations-title">
+        <div class="case-section-label"><span>06</span> LIMITATIONS / BOUNDARY</div>
+        <div class="case-copy">
+          <h2 id="pricing-limitations-title">Research, not execution.</h2>
+          <p>Options Lab is local, read-only, and offline: no live quotes, orders, or authenticated multi-user hosting. Portfolio risk is implemented; complete hedging and strategy simulators remain <a class="text-link" href="https://github.com/karisheen/Black-Scholes-Pricing-Model/blob/4c66ce6e98a04e29c920b977585cd6a704827a4e/ROADMAP.md#p5--systematic-trading-and-market-making-research">roadmap work</a>. Model sensitivities do not establish returns. The browser lab below is a smaller JavaScript reimplementation, not hosted Options Lab.</p>
+        </div>
+      </section>
+      <nav class="case-next" aria-label="Next destination"><span>CONTINUE / SMALLER BROWSER DEMO</span><a href="./index.html#lab">Open the browser pricing lab ↗</a></nav>
       <footer class="footer"><span>DAKARI ANTOINE / ENGINEERING CASE STUDY</span><a href="./index.html#contact">OPEN A CHANNEL ↗</a></footer>
     </main>
   </body>

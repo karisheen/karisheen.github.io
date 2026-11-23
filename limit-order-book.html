@@ -4,42 +4,140 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
     <meta name="theme-color" content="#f2efe8" />
-    <meta name="description" content="An engineering case study of a resilient multi-exchange crypto order-book dashboard with normalized feeds and explicit health states." />
-    <title>Live Crypto Order Book — Dakari Antoine</title>
+    <meta name="description" content="Crypto Order Flow Terminal: Python-owned market data, a React workspace, causal recording and replay, and constrained paper accounting with explicit evidence limits." />
+    <meta property="og:title" content="Crypto Order Flow Terminal — Dakari Antoine" />
+    <meta property="og:description" content="From public feeds to inspectable order flow: exact native analytics, deterministic replay, and simulated accounting that keeps failure visible." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://karisheen.github.io/limit-order-book.html" />
+    <meta property="og:image" content="https://karisheen.github.io/assets/images/terminal-live-book.png" />
+    <meta property="og:image:width" content="1800" />
+    <meta property="og:image:height" content="1125" />
+    <meta property="og:image:alt" content="Live Binance BTC/USDT hourly candles, partial-depth order book, and time-and-sales tape." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Crypto Order Flow Terminal — Dakari Antoine" />
+    <meta name="twitter:description" content="Public market data, causal replay, and constrained paper accounting—not live execution." />
+    <meta name="twitter:image" content="https://karisheen.github.io/assets/images/terminal-live-book.png" />
+    <meta name="twitter:image:alt" content="Live Binance BTC/USDT hourly candles, partial-depth order book, and time-and-sales tape." />
+    <link rel="canonical" href="https://karisheen.github.io/limit-order-book.html" />
+    <title>Crypto Order Flow Terminal — Dakari Antoine</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header"><div class="shell header-inner"><a class="brand" href="./index.html"><span class="brand-mark" aria-hidden="true">d&gt;</span> DAKARI.ANTOINE</a><a class="text-link" href="./index.html#work">ALL WORK ↗</a></div></header>
-    <main id="main" class="shell case-main">
+    <main id="main" class="shell case-main case-feature">
       <a class="text-link case-back" href="./index.html#order-book">← Back to the portfolio</a>
       <header class="case-hero">
         <aside class="case-index" aria-label="Project summary">
           <p class="eyebrow accent">PROJECT FILE / 002</p>
           <dl>
-            <div><dt>STATUS</dt><dd>WORKING EDUCATIONAL DASHBOARD</dd></div>
+            <div><dt>STATUS</dt><dd>LOCAL RESEARCH TERMINAL</dd></div>
             <div><dt>ROLE</dt><dd>INDEPENDENT SYSTEM DESIGN + ENGINEERING</dd></div>
-            <div><dt>VENUES</dt><dd>FIVE PUBLIC EXCHANGE FEEDS</dd></div>
-            <div><dt>OUTPUT</dt><dd>LADDER / CHARTS / HEALTH STATES</dd></div>
-            <div><dt>EXECUTION</dt><dd>NONE / MARKET OBSERVATION</dd></div>
+            <div><dt>SOURCE</dt><dd>PUBLIC SPOT + PERPETUAL FEEDS</dd></div>
+            <div><dt>AUTHORITY</dt><dd>PYTHON SESSIONS / REACT UI</dd></div>
+            <div><dt>EXECUTION</dt><dd>SIMULATED ONLY</dd></div>
           </dl>
         </aside>
         <div class="case-intro">
-          <p class="eyebrow accent">MARKET DATA / RESILIENCE</p>
-          <h1>Live Crypto<br />Order Book</h1>
-          <p class="case-lead">A multi-venue dashboard that keeps partial failure visible instead of pretending every public feed is equally fresh or reliable.</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">WebSockets</span><span class="tag">Streamlit</span><span class="tag">Plotly</span></div>
-          <div class="case-actions"><a class="button button-primary" href="https://github.com/karisheen/Limit-Orderbook" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div>
+          <p class="eyebrow accent">MARKET MICROSTRUCTURE / EVIDENCE</p>
+          <h1>Crypto Order<br />Flow Terminal</h1>
+          <p class="case-lead">A local research terminal for inspecting native spot and perpetual order books and trades across public venues, replaying recorded events, and simulating orders without placing one on an exchange.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">React / TypeScript + Vite</span><span class="tag">WebSockets</span><span class="tag">Recording / Replay</span></div>
+          <div class="case-actions">
+            <a class="button button-primary" href="https://github.com/karisheen/Limit-Orderbook/tree/1e814ac866bb12b00aee7aec810f8a6012829ea3">Explore repository ↗</a>
+            <a class="text-link" href="https://raw.githubusercontent.com/karisheen/Limit-Orderbook/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/media/orderbook-demo.mp4">Captioned walkthrough / 2:15 MP4 ↗</a>
+          </div>
         </div>
       </header>
-      <section class="case-status" aria-label="System at a glance"><div><span>INPUT</span><strong>Public WS + REST feeds</strong></div><div><span>NORMALIZE</span><strong>Canonical snapshots</strong></div><div><span>SUPERVISE</span><strong>Freshness + fallback</strong></div><div><span>PRESENT</span><strong>Ladder + market views</strong></div></section>
-      <section class="case-section" aria-labelledby="lob-problem-title"><div class="case-section-label"><span>01</span> PROBLEM / RESPONSIBILITY</div><div class="case-copy"><h2 id="lob-problem-title">“Live” is a system state, not a label.</h2><p>Public exchange feeds differ in protocol, symbol format, update cadence, geography, and failure behavior. A dashboard that collapses those differences into one polished number can hide stale or missing data.</p><p>I designed the adapter contract, normalized domain model, supervised feed workers, bounded histories, health states, and Streamlit presentation layer as an independent engineering project.</p></div></section>
-      <section class="case-section" aria-labelledby="lob-architecture-title"><div class="case-section-label"><span>02</span> ARCHITECTURE / DATA FLOW</div><div class="case-copy"><h2 id="lob-architecture-title">Normalize first. Degrade explicitly.</h2><div class="case-flow" aria-label="Exchange WebSocket and REST feeds pass through adapters, normalized snapshots, supervised workers, and then the dashboard."><div class="case-flow-step"><b>01 / VENUE FEEDS</b><span>WEBSOCKET + REST</span></div><span class="case-flow-arrow" aria-hidden="true">→</span><div class="case-flow-step"><b>02 / ADAPTERS</b><span>SYMBOL + PAYLOAD CONTRACTS</span></div><span class="case-flow-arrow" aria-hidden="true">→</span><div class="case-flow-step"><b>03 / DOMAIN</b><span>NORMALIZED BOOK SNAPSHOT</span></div><span class="case-flow-arrow" aria-hidden="true">→</span><div class="case-flow-step"><b>04 / SERVICE</b><span>WORKERS / FALLBACK / HISTORY</span></div><span class="case-flow-arrow" aria-hidden="true">→</span><div class="case-flow-step"><b>05 / UI</b><span>LADDER / DEPTH / HEALTH</span></div></div></div></section>
-      <section class="case-section" aria-labelledby="lob-decisions-title"><div class="case-section-label"><span>03</span> ENGINEERING DECISIONS</div><div class="case-copy"><h2 id="lob-decisions-title">Partial failure stays observable.</h2><div class="case-decisions"><article><span>DECISION 01</span><h3>WebSocket first, REST fallback.</h3><p>Reconnects use capped backoff. After three failed sessions, the subscription permanently falls back to REST polling instead of flapping.</p></article><article><span>DECISION 02</span><h3>Freshness is part of the model.</h3><p>Data older than 15 seconds is degraded; absent data is disconnected. Healthy venues continue rendering when one feed fails.</p></article><article><span>DECISION 03</span><h3>Bound long-running state.</h3><p>Spread and depth histories have fixed caps, preventing a dashboard left open for hours from growing memory without limit.</p></article><article><span>DECISION 04</span><h3>Keep venue differences visible.</h3><p>The cross-venue best price is labeled approximate because USD and USDT quotes are not identical economic instruments.</p></article></div></div></section>
-      <section class="case-section" aria-labelledby="lob-evidence-title"><div class="case-section-label"><span>04</span> VERIFICATION / EVIDENCE</div><div class="case-copy"><h2 id="lob-evidence-title">Failures are exercised without the network.</h2><ul class="case-evidence"><li><strong>Adapter contract tests</strong><span>Canned venue payloads verify normalization and symbol mapping deterministically.</span></li><li><strong>Resilience tests</strong><span>Timeouts, rate limits, proxy failures, malformed JSON, and degraded states use typed failure paths.</span></li><li><strong>Retry policy</strong><span>REST calls use three attempts, exponential backoff with jitter, and a ten-second timeout; non-retryable 4xx responses fail fast.</span></li><li><strong>Live smoke path</strong><span>A separate manual check exercises public REST access across all supported venues.</span></li></ul></div></section>
-      <section class="case-section case-limitations" aria-labelledby="lob-limitations-title"><div class="case-section-label"><span>05</span> LIMITATIONS / BOUNDARIES</div><div class="case-copy"><h2 id="lob-limitations-title">A view of public liquidity, not an execution venue.</h2><p>Bybit blocks U.S. public API traffic, while Coinbase and KuCoin use slower REST polling. Public endpoints are rate-limited and data availability can change. The approximate cross-venue comparison mixes USD and USDT pairs.</p><p>The system observes markets; it does not match, route, or place orders.</p></div></section>
-      <nav class="case-next" aria-label="Next case study"><span>NEXT FILE / 003</span><a href="./project2.html">Quantitative Pricing Toolkit ↗</a></nav>
+      <figure class="case-plate">
+        <a href="./assets/images/terminal-live-book.png"><img src="./assets/images/terminal-live-book.png" width="1800" height="1125" fetchpriority="high" decoding="async" alt="Binance BTC/USDT hourly candles with volume, native bid and ask levels, and timestamped trades. The live source reads Ready · partial depth." /></a>
+        <figcaption><strong>Live capture / Binance BTC/USDT spot.</strong> Hourly candles show the price history; the ladder shows resting orders and the tape shows completed trades. The source is ready, with partial—not full-market—depth. <a class="text-link" href="./assets/images/terminal-live-book.png">View original ↗</a> · <a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/evidence/desktop-redesign/manifest.json">Capture record ↗</a></figcaption>
+      </figure>
+
+      <section class="case-section" aria-labelledby="lob-problem-title">
+        <div class="case-section-label"><span>01</span> OPERATOR / RESPONSIBILITY</div>
+        <div class="case-copy">
+          <h2 id="lob-problem-title">A chart is not a health certificate.</h2>
+          <p>I built a local terminal that separates market observation, evidence quality, and simulated decisions. Python owns exchange connections, reconstruction, and financial calculations; React presents the workspace. The earlier Streamlit dashboard remains a thin legacy client, not the current architecture.</p>
+          <p>The linked walkthrough begins with recorded public Hyperliquid BTC perpetual data, then switches to a labeled synthetic sandbox. Its accelerated 60-second funding schedule is an explicit simulation assumption—not observed exchange funding.</p>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="lob-architecture-title">
+        <div class="case-section-label"><span>02</span> ARCHITECTURE / CAUSAL CAPTURE</div>
+        <div class="case-copy">
+          <h2 id="lob-architecture-title">Record upstream of the screen.</h2>
+          <div class="case-flow" role="group" aria-label="Public feeds enter raw capture, then venue adapters reconstruct books and capture normalized transactions, followed by native session analytics and the React workspace.">
+            <div class="case-flow-step"><b>01 / PUBLIC FEEDS</b><span>WEBSOCKET + REST</span></div>
+            <span class="case-flow-arrow" aria-hidden="true">→</span>
+            <div class="case-flow-step"><b>02 / INGESTION</b><span>RAW CAPTURE BRANCH</span></div>
+            <span class="case-flow-arrow" aria-hidden="true">→</span>
+            <div class="case-flow-step"><b>03 / ADAPTERS</b><span>BOOK + NORMALIZED CAPTURE</span></div>
+            <span class="case-flow-arrow" aria-hidden="true">→</span>
+            <div class="case-flow-step"><b>04 / NATIVE SESSION</b><span>ANALYTICS + ELIGIBILITY</span></div>
+            <span class="case-flow-arrow" aria-hidden="true">→</span>
+            <div class="case-flow-step"><b>05 / REACT UI</b><span>SESSION-SCOPED WEBSOCKET</span></div>
+          </div>
+          <p>Venue adapters preserve instrument identity and apply source-specific sequence, snapshot, and checksum rules. When recording is enabled, original raw bytes branch into durable capture at ingestion; complete normalized transactions are captured before UI presentation. Recorder ownership survives a closed browser; freezing a chart stops neither collection nor recording.</p>
+          <p>Each browser document owns an independent Python session, even when feeds are shared. Session/source/generation fences scope WebSocket updates and HTTP mutations. An unavailable live source never silently becomes demo.</p>
+          <details class="case-notes">
+            <summary>Clocks, replay, and what a seek guarantees</summary>
+            <p>Exchange event time is distinct from receive-monotonic time. Ticker candles use exchange time; observed-flow windows use projected receive time. They are not stitched together. Exchange timestamps never sort global replay.</p>
+            <p>Raw replay re-decodes original bytes and verifies exact normalized batches; normalized replay skips decoding, not reducer checks. Seek reconstructs a complete causal prefix, clearing future analytical and paper state. Checkpoints and canonical hashes audit reconstruction; speed changes pacing, not economics. Recorded gaps stay gaps, never invented history.</p>
+            <p><a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/RECORDING.md">Capture contract ↗</a> · <a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/REPLAY.md">Replay contract ↗</a></p>
+          </details>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="lob-decisions-title">
+        <div class="case-section-label"><span>03</span> MICROSTRUCTURE / INSPECTION</div>
+        <div class="case-copy">
+          <h2 id="lob-decisions-title">Separate resting liquidity from executions.</h2>
+          <p>The spread is the gap between the best displayed ask and bid, not a record of traded prices. A Bid × Ask footprint groups executed volume by price: seller-initiated trades at the bid beside buyer-initiated trades at the ask. Signed trade delta is buyer-initiated volume minus seller-initiated volume; cumulative volume delta (CVD) accumulates that signed flow over the observed window, with unknown aggressor flow kept separate. VWAP is the volume-weighted average execution price. These trade measures describe executions, not disappearing orders. Historical resting-depth overlays remain separate from traded-volume cells. Optional open-interest and funding panes identify their supplying instrument and require compatible observation clocks.</p>
+          <figure class="case-plate">
+            <a href="./assets/images/terminal-footprint.webp"><img src="./assets/images/terminal-footprint.webp" width="1800" height="1125" loading="lazy" decoding="async" alt="Synthetic native demo footprint showing historical resting-depth overlays and individual-print inspection in the terminal." /></a>
+            <figcaption><strong>Synthetic native demo.</strong> Actual application capture using invented data through production adapters; historical depth and individual-print badges are not public-market observations. <a class="text-link" href="./assets/images/terminal-footprint.webp">View original ↗</a></figcaption>
+          </figure>
+          <details class="case-notes">
+            <summary>Exact native evidence versus indicative aggregates</summary>
+            <p>Native decimal values retain instrument, units, source references, and eligibility. Missing depth invalidates a full-band calculation; unknown aggressor flow stays unknown. Cross-venue USD/USDT/USDC displays combine quotes without conversion and are explicitly indicative—not executable spreads or paper-order prices.</p>
+            <p><a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/ANALYTICS.md">Analytics definitions ↗</a> · <a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/CHART_REDESIGN_PLAN.md#recorded-implementation-observations">Image provenance ↗</a></p>
+          </details>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="lob-evidence-title">
+        <div class="case-section-label"><span>04</span> MEASUREMENT / REGRESSIONS</div>
+        <div class="case-copy">
+          <h2 id="lob-evidence-title">A bounded measurement, not a latency promise.</h2>
+          <p>The repository reports <strong>47.6 ms browser receive-to-paint p95</strong> during a four-minute, one-browser, 34-stream live observation. This sampled presentation benchmark is neither exchange-to-screen latency nor sustained-capacity certification.</p>
+          <p><a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/STABILITY_REVIEW.md#finite-live-acceptance">Measurement conditions ↗</a> · <a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/evidence/terminal-stability-live.json">Committed receipt ↗</a></p>
+          <figure class="case-plate">
+            <a href="./assets/images/terminal-price.png"><img src="./assets/images/terminal-price.png" width="1800" height="1125" loading="lazy" decoding="async" alt="Binance ticker-history chart still visible while the terminal reports analytical_queue_overflow and an unavailable observed book." /></a>
+            <figcaption><strong>Failure case / independent data paths.</strong> In this separate live capture, REST candles remain visible after the observed-book collector overflows. A current chart is not evidence of a healthy book. <a class="text-link" href="./assets/images/terminal-price.png">View original ↗</a> · <a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/evidence/chart-redesign/live-price-1440-dark.png">Upstream screenshot ↗</a></figcaption>
+          </figure>
+          <p>Inspectable regressions cover <a href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/tests/test_replay.py">replay parity and seek</a>, <a href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/tests/test_workstation_analytics.py">analytical exclusions</a>, and <a href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/tests/test_workstation_paper_perpetual.py">perpetual accounting</a>. Evidence links are pinned to revision <code>1e814ac</code>; these are upstream receipts, not newly reproduced results.</p>
+        </div>
+      </section>
+
+      <section class="case-section case-limitations" aria-labelledby="lob-limitations-title">
+        <div class="case-section-label"><span>05</span> PAPER / RESEARCH BOUNDARIES</div>
+        <div class="case-copy">
+          <h2 id="lob-limitations-title">Lost continuity freezes paper accounting.</h2>
+          <p>Spot paper uses prefunded cash and inventory; supported perpetuals use isolated one-way positions. Market and marketable-limit IOC orders consume observed depth under explicit fees and latency assumptions. Native P&amp;L is simulated accounting, not an exchange fill.</p>
+          <details class="case-notes">
+            <summary>Fail-closed economics and paper limits</summary>
+            <p>Perpetual margin, leverage, funding, and protective liquidation use declared models, not exchange risk tiers. Liquidation may remain partial or leave debt. There is no passive queue-fill, borrowing, or market-impact model. Unknown fees, conversion evidence, or insufficient depth are unavailable, not zero.</p>
+            <p>Analytical continuity loss freezes affected accounting at its last complete prefix. Reconnection cannot repair or thaw that run; an explicit new run establishes a new boundary.</p>
+            <p><a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/CONTRACTS.md">Accounting contracts ↗</a></p>
+          </details>
+          <p>Offline research uses chronological purging, embargo, and cost/latency stress on independent unfunded markouts—not a funded portfolio backtest. The CLI runs experiments; the terminal reads retained reports. <a href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/STRATEGY_RESEARCH.md">Research hypotheses</a> are not validated alpha.</p>
+          <p>No live execution, wallets, Rust HFT engine, automated market making, or funding-arbitrage strategy is implemented. Public-feed support does not guarantee regional access or financial readiness.</p>
+        </div>
+      </section>
+
+      <nav class="case-next" aria-label="Next case study"><span>NEXT FILE / 003</span><a href="./project2.html">Options Lab ↗</a></nav>
       <footer class="footer"><span>DAKARI ANTOINE / ENGINEERING CASE STUDY</span><a href="./index.html#contact">OPEN A CHANNEL ↗</a></footer>
     </main>
   </body>
