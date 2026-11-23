@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360" role="img" aria-labelledby="title description">
+  <title id="title">Cost schedule versus discounted hedging-error RMSE</title>
+  <desc id="description">Synthetic P5.19a study, matched 20% path and model volatility, 1,536 paired paths. USD per configured short call with multiplier one. Across zero, baseline, and adverse stock costs, every-grid RMSE is 0.4232, 0.4311, and 0.5451; the 0.05 inventory threshold is 0.4611, 0.4661, and 0.5438. Lower means less error, not higher profit. The vertical axis starts at 0.40 USD. No established winner at adverse costs.</desc>
+  <metadata>Source: https://github.com/karisheen/Black-Scholes-Pricing-Model/blob/87d2b71bbedcef439dc653e62f561e2dc4f3acd7/docs/hedging-results.csv; path_volatility=0.2; policies=periodic_1,threshold_005; metric=discounted_error_rmse. Every-grid exact values: 0.42322497589409946,0.4311220457577079,0.5451426648907093. Threshold exact values: 0.46114963703133394,0.4661229915098142,0.543823021940553. Coordinates: x=70,190,310 for categorical cost schedules; y=640-900*RMSE.</metadata>
+  <rect width="360" height="360" fill="#f2efe8" />
+  <g font-family="system-ui, sans-serif" fill="#252b34">
+    <text x="12" y="23" font-size="18" font-weight="600">Discounted error RMSE (USD)</text>
+    <path d="M14 48H46" fill="none" stroke="#294a98" stroke-width="2.5" />
+    <circle cx="30" cy="48" r="5" fill="#f2efe8" stroke="#294a98" stroke-width="2.5" />
+    <text x="57" y="53" font-size="16">Every-grid hedge</text>
+    <path d="M14 74H46" fill="none" stroke="#993e20" stroke-width="2.5" stroke-dasharray="6 4" />
+    <rect x="26" y="70" width="8" height="8" fill="#993e20" />
+    <text x="57" y="79" font-size="16">0.05 inventory threshold</text>
+    <g fill="none" stroke="#c5c3bd" stroke-width="1">
+      <path d="M60 100H332 M60 145H332 M60 190H332 M60 235H332 M60 280H332" />
+    </g>
+    <g font-size="15" text-anchor="end">
+      <text x="51" y="105">0.60</text>
+      <text x="51" y="150">0.55</text>
+      <text x="51" y="195">0.50</text>
+      <text x="51" y="240">0.45</text>
+      <text x="51" y="285">0.40</text>
+    </g>
+    <path d="M70 259.097522 L190 251.990159 L310 149.371602" fill="none" stroke="#294a98" stroke-width="2.5" />
+    <path d="M70 224.965327 L190 220.489308 L310 150.559280" fill="none" stroke="#993e20" stroke-width="2.5" stroke-dasharray="6 4" />
+    <g fill="#f2efe8" stroke="#294a98" stroke-width="2.5">
+      <circle cx="70" cy="259.097522" r="6" />
+      <circle cx="190" cy="251.990159" r="6" />
+      <circle cx="310" cy="149.371602" r="7" />
+    </g>
+    <g fill="#993e20">
+      <rect x="66" y="220.965327" width="8" height="8" />
+      <rect x="186" y="216.489308" width="8" height="8" />
+      <rect x="306" y="146.559280" width="8" height="8" />
+    </g>
+    <g font-size="15" text-anchor="middle">
+      <text x="70" y="307">Zero</text>
+      <text x="190" y="307">Baseline</text>
+      <text x="310" y="307">Adverse</text>
+      <text x="190" y="330">Stock cost schedule</text>
+    </g>
+    <text x="12" y="352" font-size="14">Per short call · vertical axis starts at $0.40</text>
+  </g>
+</svg>
