@@ -17,11 +17,11 @@
     <meta property="og:url" content="https://karisheen.github.io/" />
     <meta
       property="og:image"
-      content="https://karisheen.github.io/assets/images/terminal-live-book.png"
+      content="https://karisheen.github.io/assets/images/terminal-workspace.png"
     />
-    <meta property="og:image:alt" content="Binance BTC/USDT hourly candles beside the terminal’s live order book and trade tape" />
+    <meta property="og:image:alt" content="Current Order Flow Terminal showing Binance BTC/USDT minute candles, native depth, trade tape, and cumulative delta" />
     <meta property="og:image:width" content="1800" />
-    <meta property="og:image:height" content="1125" />
+    <meta property="og:image:height" content="1380" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://karisheen.github.io/" />
     <title>Dakari Antoine — Software &amp; Quantitative Systems</title>
@@ -35,6 +35,7 @@
     />
     <link rel="stylesheet" href="./styles/main.css" />
     <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/image-viewer.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -300,20 +301,13 @@
               Python feed capture supports causal replay and constrained paper trading.
             </p>
             <figure class="project-plate">
-              <img
-                src="./assets/images/terminal-card.webp"
-                alt="Binance BTC/USDT hourly candles alongside bid and ask levels and recent trades"
-                width="720"
-                height="450"
-                loading="lazy"
-                decoding="async"
-              />
+              <a href="./assets/images/terminal-workspace.png" aria-label="Enlarge screenshot of the Crypto Order Flow Terminal">
+                <img src="./assets/images/terminal-card.webp" width="720" height="552" loading="lazy" decoding="async"
+                  alt="Live BTC/USDT minute candles with a depth ladder, order-book imbalance, trade tape, and cumulative delta" />
+                <span class="text-link">Enlarge screenshot ↗</span>
+              </a>
               <figcaption>
-                <strong>Live capture:</strong>
-                Binance BTC/USDT spot, with hourly candles, a native depth ladder, and the trade tape.
-                <a class="text-link" href="./assets/images/terminal-live-book.png"
-                  >View original ↗</a
-                >
+                <strong>Live capture / Binance spot.</strong> One-minute candles beside the observed book, tape, and signed trade flow.
               </figcaption>
             </figure>
             <div class="tags">
@@ -355,21 +349,15 @@
               before fees.
             </p>
             <figure class="project-plate">
-              <img
-                src="./assets/images/options-card.webp"
-                alt="Options Lab synthetic replay showing an option chain, volatility smile, and quoted butterfly diagnostics"
-                width="720"
-                height="525"
-                loading="lazy"
-                decoding="async"
-              />
+              <a href="./assets/images/options-lab.png" aria-label="Enlarge screenshot of Options Lab">
+                <img src="./assets/images/options-card.webp" width="720" height="525" loading="lazy" decoding="async"
+                  alt="Options Lab synthetic replay showing an option chain, volatility smile, and quoted butterfly diagnostics" />
+                <span class="text-link">Enlarge screenshot ↗</span>
+              </a>
               <figcaption>
                 <strong>Public synthetic demo.</strong>
                 Generated option books pass through the replay, implied-volatility,
                 and fitted-smile workflow—not captured market performance.
-                <a class="text-link" href="./assets/images/options-lab.png"
-                  >View original ↗</a
-                >
               </figcaption>
             </figure>
             <div class="tags">

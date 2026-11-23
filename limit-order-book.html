@@ -9,19 +9,20 @@
     <meta property="og:description" content="From public feeds to inspectable order flow: exact native analytics, deterministic replay, and simulated accounting that keeps failure visible." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://karisheen.github.io/limit-order-book.html" />
-    <meta property="og:image" content="https://karisheen.github.io/assets/images/terminal-live-book.png" />
+    <meta property="og:image" content="https://karisheen.github.io/assets/images/terminal-workspace.png" />
     <meta property="og:image:width" content="1800" />
-    <meta property="og:image:height" content="1125" />
-    <meta property="og:image:alt" content="Live Binance BTC/USDT hourly candles, partial-depth order book, and time-and-sales tape." />
+    <meta property="og:image:height" content="1380" />
+    <meta property="og:image:alt" content="Current live Binance BTC/USDT workspace with minute candles, native depth, trade tape, and cumulative delta." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Crypto Order Flow Terminal — Dakari Antoine" />
     <meta name="twitter:description" content="Public market data, causal replay, and constrained paper accounting—not live execution." />
-    <meta name="twitter:image" content="https://karisheen.github.io/assets/images/terminal-live-book.png" />
-    <meta name="twitter:image:alt" content="Live Binance BTC/USDT hourly candles, partial-depth order book, and time-and-sales tape." />
+    <meta name="twitter:image" content="https://karisheen.github.io/assets/images/terminal-workspace.png" />
+    <meta name="twitter:image:alt" content="Current live Binance BTC/USDT workspace with minute candles, native depth, trade tape, and cumulative delta." />
     <link rel="canonical" href="https://karisheen.github.io/limit-order-book.html" />
     <title>Crypto Order Flow Terminal — Dakari Antoine</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/image-viewer.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -50,9 +51,17 @@
           </div>
         </div>
       </header>
+      <section class="case-contributions" aria-labelledby="lob-contributions-title">
+        <h2 id="lob-contributions-title">What I built</h2>
+        <ul>
+          <li>Python-owned book reconstruction and analytics, surfaced in a React workspace with explicit source health.</li>
+          <li>Causal recording and deterministic replay that reconstruct auditable session state, including gaps.</li>
+          <li>Simulated spot and perpetual accounting that freezes when analytical continuity is lost.</li>
+        </ul>
+      </section>
       <figure class="case-plate">
-        <a href="./assets/images/terminal-live-book.png"><img src="./assets/images/terminal-live-book.png" width="1800" height="1125" fetchpriority="high" decoding="async" alt="Binance BTC/USDT hourly candles with volume, native bid and ask levels, and timestamped trades. The live source reads Ready · partial depth." /></a>
-        <figcaption><strong>Live capture / Binance BTC/USDT spot.</strong> Hourly candles show the price history; the ladder shows resting orders and the tape shows completed trades. The source is ready, with partial—not full-market—depth. <a class="text-link" href="./assets/images/terminal-live-book.png">View original ↗</a> · <a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/evidence/desktop-redesign/manifest.json">Capture record ↗</a></figcaption>
+        <a href="./assets/images/terminal-workspace.png" aria-label="Enlarge screenshot of the live terminal"><img src="./assets/images/terminal-workspace.png" width="1800" height="1380" fetchpriority="high" decoding="async" alt="Binance BTC/USDT one-minute price and volume chart, with native bids and asks, book imbalance, recent trades, and cumulative delta." /><span class="text-link">Enlarge screenshot ↗</span></a>
+        <figcaption><strong>Live session / Binance BTC/USDT spot.</strong> Captured from the locally running <a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/tree/1e814ac866bb12b00aee7aec810f8a6012829ea3">1e814ac build</a> on 23 November 2026 (UTC). One-minute candles come from venue history; the ladder, tape, and cumulative delta use observed market data. The terminal labels its depth as bounded and preserves the coverage gap.</figcaption>
       </figure>
 
       <section class="case-section" aria-labelledby="lob-problem-title">
@@ -96,13 +105,13 @@
           <h2 id="lob-decisions-title">Separate resting liquidity from executions.</h2>
           <p>The spread is the gap between the best displayed ask and bid, not a record of traded prices. A Bid × Ask footprint groups executed volume by price: seller-initiated trades at the bid beside buyer-initiated trades at the ask. Signed trade delta is buyer-initiated volume minus seller-initiated volume; cumulative volume delta (CVD) accumulates that signed flow over the observed window, with unknown aggressor flow kept separate. VWAP is the volume-weighted average execution price. These trade measures describe executions, not disappearing orders. Historical resting-depth overlays remain separate from traded-volume cells. Optional open-interest and funding panes identify their supplying instrument and require compatible observation clocks.</p>
           <figure class="case-plate">
-            <a href="./assets/images/terminal-footprint.webp"><img src="./assets/images/terminal-footprint.webp" width="1800" height="1125" loading="lazy" decoding="async" alt="Synthetic native demo footprint showing historical resting-depth overlays and individual-print inspection in the terminal." /></a>
-            <figcaption><strong>Synthetic native demo.</strong> Actual application capture using invented data through production adapters; historical depth and individual-print badges are not public-market observations. <a class="text-link" href="./assets/images/terminal-footprint.webp">View original ↗</a></figcaption>
+            <a href="./assets/images/terminal-footprint.webp" aria-label="Enlarge screenshot of the recorded Hyperliquid footprint"><img src="./assets/images/terminal-footprint.webp" width="1800" height="1380" loading="lazy" decoding="async" alt="Recorded Hyperliquid BTC perpetual replay at delivery 481: bid × ask footprint cells and executed-volume profile alongside the depth ladder and trade tape." /><span class="text-link">Enlarge screenshot ↗</span></a>
+            <figcaption><strong>Recorded session / Hyperliquid BTC perpetual.</strong> The same build, paused at delivery 481 of 802 in public-market capture <code>7b570bb7</code>. The heatmap and footprint count executions at each price; the ladder shows resting liquidity. This is recorded observation, not a synthetic book or a live quote.</figcaption>
           </figure>
           <details class="case-notes">
             <summary>Exact native evidence versus indicative aggregates</summary>
             <p>Native decimal values retain instrument, units, source references, and eligibility. Missing depth invalidates a full-band calculation; unknown aggressor flow stays unknown. Cross-venue USD/USDT/USDC displays combine quotes without conversion and are explicitly indicative—not executable spreads or paper-order prices.</p>
-            <p><a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/ANALYTICS.md">Analytics definitions ↗</a> · <a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/CHART_REDESIGN_PLAN.md#recorded-implementation-observations">Image provenance ↗</a></p>
+            <p><a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/ANALYTICS.md">Analytics definitions ↗</a></p>
           </details>
         </div>
       </section>
@@ -114,8 +123,8 @@
           <p>The repository reports <strong>47.6 ms browser receive-to-paint p95</strong> during a four-minute, one-browser, 34-stream live observation. This sampled presentation benchmark is neither exchange-to-screen latency nor sustained-capacity certification.</p>
           <p><a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/STABILITY_REVIEW.md#finite-live-acceptance">Measurement conditions ↗</a> · <a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/evidence/terminal-stability-live.json">Committed receipt ↗</a></p>
           <figure class="case-plate">
-            <a href="./assets/images/terminal-price.png"><img src="./assets/images/terminal-price.png" width="1800" height="1125" loading="lazy" decoding="async" alt="Binance ticker-history chart still visible while the terminal reports analytical_queue_overflow and an unavailable observed book." /></a>
-            <figcaption><strong>Failure case / independent data paths.</strong> In this separate live capture, REST candles remain visible after the observed-book collector overflows. A current chart is not evidence of a healthy book. <a class="text-link" href="./assets/images/terminal-price.png">View original ↗</a> · <a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/evidence/chart-redesign/live-price-1440-dark.png">Upstream screenshot ↗</a></figcaption>
+            <a href="./assets/images/terminal-price.png" aria-label="Enlarge screenshot: terminal failure handling"><img src="./assets/images/terminal-price.png" width="1800" height="1125" loading="lazy" decoding="async" alt="Binance ticker-history chart still visible while the terminal reports analytical_queue_overflow and an unavailable observed book." /><span class="text-link">Enlarge screenshot ↗</span></a>
+            <figcaption><strong>Failure case / independent data paths.</strong> In this separate live capture, REST candles remain visible after the observed-book collector overflows. A current chart is not evidence of a healthy book. <a class="text-link" href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/docs/evidence/chart-redesign/live-price-1440-dark.png">Upstream screenshot ↗</a></figcaption>
           </figure>
           <p>Inspectable regressions cover <a href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/tests/test_replay.py">replay parity and seek</a>, <a href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/tests/test_workstation_analytics.py">analytical exclusions</a>, and <a href="https://github.com/karisheen/Limit-Orderbook/blob/1e814ac866bb12b00aee7aec810f8a6012829ea3/tests/test_workstation_paper_perpetual.py">perpetual accounting</a>. Evidence links are pinned to revision <code>1e814ac</code>; these are upstream receipts, not newly reproduced results.</p>
         </div>
